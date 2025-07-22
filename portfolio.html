@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mindscope Services Ltd</title>
+    <meta name="description" content="Explore our portfolio of successful projects, events, and client successes. See how Mindscope Services Ltd delivers excellence across all service areas.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://via.placeholder.com/200x60/4B002E/FFFFFF?text=Mindscope+Logo" alt="Mindscope Services Ltd" class="logo">
+                <span class="logo-text">Mindscope Services Ltd</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="services/catering.html" class="dropdown-link">Catering Services</a>
+                        <a href="services/logistics.html" class="dropdown-link">Transport & Logistics</a>
+                        <a href="services/consulting.html" class="dropdown-link">Business Consulting</a>
+                        <a href="services/events.html" class="dropdown-link">Event Management</a>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-background">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1 class="page-title">Our Portfolio</h1>
+                <p class="page-subtitle">Showcasing our commitment to excellence across all service areas</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Portfolio</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Stats -->
+    <section class="portfolio-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number counter" data-target="500">0</div>
+                    <div class="stat-label">Events Catered</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number counter" data-target="1000">0</div>
+                    <div class="stat-label">Transport Services</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number counter" data-target="150">0</div>
+                    <div class="stat-label">Business Consultations</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number counter" data-target="200">0</div>
+                    <div class="stat-label">Events Managed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Our Work</h2>
+                <p class="section-subtitle">Explore our successful projects across different service categories</p>
+            </div>
+            
+            <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="catering">Catering</button>
+                <button class="filter-btn" data-filter="logistics">Logistics</button>
+                <button class="filter-btn" data-filter="consulting">Consulting</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Catering Projects -->
+                <div class="portfolio-item" data-category="catering" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop" alt="Corporate Conference Catering">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>TechHub Annual Conference</h3>
+                                <p>500-guest corporate catering event</p>
+                                <div class="portfolio-tags">
+                                    <span>Corporate</span>
+                                    <span>Large Scale</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" onclick="openPortfolioModal('catering-1')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="events" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop" alt="Wedding Event Management">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Elegant Garden Wedding</h3>
+                                <p>Complete event planning and management</p>
+                                <div class="portfolio-tags">
+                                    <span>Wedding</span>
+                                    <span>Full Service</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" onclick="openPortfolioModal('event-1')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="consulting" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Business Growth Consulting">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>SME Growth Strategy</h3>
+                                <p>Strategic consulting for local business expansion</p>
+                                <div class="portfolio-tags">
+                                    <span>Strategy</span>
+                                    <span>Growth</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" onclick="openPortfolioModal('consulting-1')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="logistics" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop" alt="Corporate Transport Services">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Corporate Fleet Management</h3>
+                                <p>Comprehensive transport solution for multinational company</p>
+                                <div class="portfolio-tags">
+                                    <span>Corporate</span>
+                                    <span>Fleet</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" onclick="openPortfolioModal('logistics-1')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="catering" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop" alt="Office Meal Programs">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Weekly Office Meal Program</h3>
+                                <p>Ongoing corporate meal service</p>
+                                <div class="portfolio-tags">
+                                    <span>Recurring</span>
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" onclick="openPortfolioModal('catering-2')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="events" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop" alt="Product Launch Event">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Tech Product Launch</h3>
+                                <p>High-profile product launch event coordination</p>
+                                <div class="portfolio-tags">
+                                    <span>Product Launch</span>
+                                    <span>Tech</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" onclick="openPortfolioModal('event-2')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="portfolio-testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Client Success Stories</h2>
+                <p class="section-subtitle">Hear from our satisfied clients about their experience</p>
+            </div>
+            
+            <div class="testimonials-carousel" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="client-logo">
+                            <img src="https://via.placeholder.com/120x60/4B002E/FFFFFF?text=TechHub" alt="TechHub">
+                        </div>
+                        <blockquote>
+                            "Mindscope transformed our annual conference experience. Their attention to detail in catering and event coordination was exceptional. Our attendees are still talking about the quality of service."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <h4>Sarah Kimani</h4>
+                            <p>CEO, TechHub Nairobi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="client-logo">
+                            <img src="https://via.placeholder.com/120x60/E7682E/FFFFFF?text=Innovation+Hub" alt="Innovation Hub">
+                        </div>
+                        <blockquote>
+                            "The business consulting services helped us scale from a small startup to a thriving enterprise. Their strategic insights and practical approach were invaluable."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <h4>Michael Ochieng</h4>
+                            <p>Founder, Innovation Hub</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="client-logo">
+                            <img src="https://via.placeholder.com/120x60/F4C52B/FFFFFF?text=Summit+Corp" alt="Summit Corporation">
+                        </div>
+                        <blockquote>
+                            "Reliable, professional, and always exceeding expectations. Mindscope has been our go-to partner for all logistics and event needs for over two years."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <h4>Grace Wanjiku</h4>
+                            <p>Operations Manager, Summit Corporation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+                <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="portfolio-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's discuss how we can help you achieve similar success with our professional services.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <a href="services/catering.html" class="btn btn-outline">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="modal portfolio-modal">
+        <div class="modal-content portfolio-modal-content">
+            <span class="close portfolio-close" onclick="closePortfolioModal()">&times;</span>
+            <div class="modal-body">
+                <div id="portfolioModalContent">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="https://via.placeholder.com/50x50/4B002E/FFFFFF?text=M" alt="Mindscope Services Ltd">
+                        <h3>Mindscope Services Ltd</h3>
+                    </div>
+                    <p>Empowering people and delivering excellence through comprehensive professional services.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/catering.html">Catering Services</a></li>
+                        <li><a href="services/logistics.html">Transport & Logistics</a></li>
+                        <li><a href="services/consulting.html">Business Consulting</a></li>
+                        <li><a href="services/events.html">Event Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Ridgeways, Kiambu Road, Nairobi</p>
+                        <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+                        <p><i class="fas fa-envelope"></i> info@mindscope.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindscope Services Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mindscope Services Ltd</title>
+    <meta name="description" content="Stay updated with the latest insights, tips, and industry trends from Mindscope Services Ltd. Expert advice on catering, logistics, business consulting, and event management.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://via.placeholder.com/200x60/4B002E/FFFFFF?text=Mindscope+Logo" alt="Mindscope Services Ltd" class="logo">
+                <span class="logo-text">Mindscope Services Ltd</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="services/catering.html" class="dropdown-link">Catering Services</a>
+                        <a href="services/logistics.html" class="dropdown-link">Transport & Logistics</a>
+                        <a href="services/consulting.html" class="dropdown-link">Business Consulting</a>
+                        <a href="services/events.html" class="dropdown-link">Event Management</a>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-background">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1 class="page-title">Our Blog</h1>
+                <p class="page-subtitle">Expert insights, industry trends, and practical tips for your business success</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Blog</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Main Content -->
+                <div class="blog-content">
+                    <!-- Featured Post -->
+                    <article class="featured-post" data-aos="fade-up">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=350&fit=crop" alt="The Future of Corporate Catering in Kenya">
+                            <div class="post-category">Featured</div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date"><i class="fas fa-calendar"></i> July 15, 2025</span>
+                                <span class="post-author"><i class="fas fa-user"></i> Sarah Kimani</span>
+                                <span class="post-time"><i class="fas fa-clock"></i> 8 min read</span>
+                            </div>
+                            <h2 class="post-title">
+                                <a href="blog/future-corporate-catering-kenya.html">The Future of Corporate Catering in Kenya: Trends and Innovations</a>
+                            </h2>
+                            <p class="post-excerpt">
+                                Discover how the corporate catering landscape is evolving in Kenya, from sustainable practices to tech-driven solutions that are reshaping how businesses approach employee nutrition and workplace culture.
+                            </p>
+                            <div class="post-tags">
+                                <span class="tag">Catering</span>
+                                <span class="tag">Corporate</span>
+                                <span class="tag">Innovation</span>
+                            </div>
+                            <a href="blog/future-corporate-catering-kenya.html" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Filter -->
+                    <div class="blog-filter" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Filter by Category</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-category="all">All Posts</button>
+                            <button class="filter-btn" data-category="catering">Catering</button>
+                            <button class="filter-btn" data-category="logistics">Logistics</button>
+                            <button class="filter-btn" data-category="consulting">Business</button>
+                            <button class="filter-btn" data-category="events">Events</button>
+                            <button class="filter-btn" data-category="tips">Tips & Guides</button>
+                        </div>
+                    </div>
+
+                    <!-- Blog Grid -->
+                    <div class="blog-grid">
+                        <!-- Post 1 -->
+                        <article class="blog-post" data-category="consulting" data-aos="fade-up" data-aos-delay="200">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop" alt="5 Proven Business Growth Strategies">
+                                <div class="post-category">Business</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date"><i class="fas fa-calendar"></i> July 10, 2025</span>
+                                    <span class="post-time"><i class="fas fa-clock"></i> 6 min read</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="blog/business-growth-strategies.html">5 Proven Business Growth Strategies for Kenyan SMEs</a>
+                                </h3>
+                                <p class="post-excerpt">
+                                    Learn the essential strategies that successful Kenyan small and medium enterprises use to scale their operations and increase profitability.
+                                </p>
+                                <div class="post-footer">
+                                    <div class="post-author-info">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Michael Otieno" class="author-avatar">
+                                        <span class="author-name">Michael Otieno</span>
+                                    </div>
+                                    <a href="blog/business-growth-strategies.html" class="read-more-link">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 2 -->
+                        <article class="blog-post" data-category="events" data-aos="fade-up" data-aos-delay="300">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=250&fit=crop" alt="Corporate Event Planning Guide">
+                                <div class="post-category">Events</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date"><i class="fas fa-calendar"></i> July 8, 2025</span>
+                                    <span class="post-time"><i class="fas fa-clock"></i> 10 min read</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="blog/corporate-event-planning-guide.html">The Ultimate Corporate Event Planning Guide for 2025</a>
+                                </h3>
+                                <p class="post-excerpt">
+                                    From initial concept to post-event analysis, master the art of planning memorable corporate events that deliver results.
+                                </p>
+                                <div class="post-footer">
+                                    <div class="post-author-info">
+                                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=60&h=60&fit=crop&crop=face" alt="Grace Wanjiku" class="author-avatar">
+                                        <span class="author-name">Grace Wanjiku</span>
+                                    </div>
+                                    <a href="blog/corporate-event-planning-guide.html" class="read-more-link">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 3 -->
+                        <article class="blog-post" data-category="logistics" data-aos="fade-up" data-aos-delay="400">
+                            <div class="post-image">
+                                <img src="assets/images/blog/transport-efficiency.jpg" alt="Transport Efficiency Tips">
+                                <div class="post-category">Logistics</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date"><i class="fas fa-calendar"></i> July 5, 2025</span>
+                                    <span class="post-time"><i class="fas fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="blog/transport-efficiency-tips.html">Maximizing Transport Efficiency: A Guide for Businesses</a>
+                                </h3>
+                                <p class="post-excerpt">
+                                    Discover practical strategies to optimize your company's transport operations and reduce costs while improving service quality.
+                                </p>
+                                <div class="post-footer">
+                                    <div class="post-author-info">
+                                        <img src="assets/images/team/james-mwangi.jpg" alt="James Mwangi" class="author-avatar">
+                                        <span class="author-name">James Mwangi</span>
+                                    </div>
+                                    <a href="blog/transport-efficiency-tips.html" class="read-more-link">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 4 -->
+                        <article class="blog-post" data-category="catering" data-aos="fade-up" data-aos-delay="500">
+                            <div class="post-image">
+                                <img src="assets/images/blog/healthy-workplace-meals.jpg" alt="Healthy Workplace Meals">
+                                <div class="post-category">Catering</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date"><i class="fas fa-calendar"></i> July 3, 2025</span>
+                                    <span class="post-time"><i class="fas fa-clock"></i> 7 min read</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="blog/healthy-workplace-meals.html">How Healthy Workplace Meals Boost Employee Productivity</a>
+                                </h3>
+                                <p class="post-excerpt">
+                                    Explore the connection between nutrition and workplace performance, and learn how to implement effective meal programs.
+                                </p>
+                                <div class="post-footer">
+                                    <div class="post-author-info">
+                                        <img src="assets/images/team/mary-njeri.jpg" alt="Mary Njeri" class="author-avatar">
+                                        <span class="author-name">Mary Njeri</span>
+                                    </div>
+                                    <a href="blog/healthy-workplace-meals.html" class="read-more-link">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 5 -->
+                        <article class="blog-post" data-category="tips" data-aos="fade-up" data-aos-delay="600">
+                            <div class="post-image">
+                                <img src="assets/images/blog/cost-effective-solutions.jpg" alt="Cost Effective Business Solutions">
+                                <div class="post-category">Tips & Guides</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date"><i class="fas fa-calendar"></i> June 30, 2025</span>
+                                    <span class="post-time"><i class="fas fa-clock"></i> 8 min read</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="blog/cost-effective-business-solutions.html">10 Cost-Effective Solutions Every Growing Business Needs</a>
+                                </h3>
+                                <p class="post-excerpt">
+                                    Smart strategies to reduce operational costs without compromising quality or service delivery in your business.
+                                </p>
+                                <div class="post-footer">
+                                    <div class="post-author-info">
+                                        <img src="assets/images/team/peter-kamau.jpg" alt="Peter Kamau" class="author-avatar">
+                                        <span class="author-name">Peter Kamau</span>
+                                    </div>
+                                    <a href="blog/cost-effective-business-solutions.html" class="read-more-link">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Post 6 -->
+                        <article class="blog-post" data-category="events" data-aos="fade-up" data-aos-delay="700">
+                            <div class="post-image">
+                                <img src="assets/images/blog/wedding-planning-trends.jpg" alt="Wedding Planning Trends 2025">
+                                <div class="post-category">Events</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-date"><i class="fas fa-calendar"></i> June 28, 2025</span>
+                                    <span class="post-time"><i class="fas fa-clock"></i> 9 min read</span>
+                                </div>
+                                <h3 class="post-title">
+                                    <a href="blog/wedding-planning-trends-2025.html">Top Wedding Planning Trends in Kenya for 2025</a>
+                                </h3>
+                                <p class="post-excerpt">
+                                    From eco-friendly celebrations to tech-integrated ceremonies, discover the latest trends shaping Kenyan weddings.
+                                </p>
+                                <div class="post-footer">
+                                    <div class="post-author-info">
+                                        <img src="assets/images/team/anne-wambui.jpg" alt="Anne Wambui" class="author-avatar">
+                                        <span class="author-name">Anne Wambui</span>
+                                    </div>
+                                    <a href="blog/wedding-planning-trends-2025.html" class="read-more-link">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination" data-aos="fade-up">
+                        <button class="page-btn prev-btn" disabled>
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <div class="page-numbers">
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <span class="page-dots">...</span>
+                            <button class="page-btn">8</button>
+                        </div>
+                        <button class="page-btn next-btn">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Newsletter Signup -->
+                    <div class="sidebar-widget newsletter-widget" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="widget-title">Stay Updated</h3>
+                        <p>Get the latest insights and tips delivered to your inbox.</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Your email address" required>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
+                        </form>
+                    </div>
+
+                    <!-- Popular Posts -->
+                    <div class="sidebar-widget popular-posts" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="widget-title">Popular Posts</h3>
+                        <div class="popular-post-item">
+                            <img src="assets/images/blog/thumbs/thumb-1.jpg" alt="Popular post">
+                            <div class="post-info">
+                                <h4><a href="#">How to Choose the Right Catering Service for Your Event</a></h4>
+                                <span class="post-date">June 25, 2025</span>
+                            </div>
+                        </div>
+                        <div class="popular-post-item">
+                            <img src="assets/images/blog/thumbs/thumb-2.jpg" alt="Popular post">
+                            <div class="post-info">
+                                <h4><a href="#">Essential Business Registration Steps in Kenya</a></h4>
+                                <span class="post-date">June 20, 2025</span>
+                            </div>
+                        </div>
+                        <div class="popular-post-item">
+                            <img src="assets/images/blog/thumbs/thumb-3.jpg" alt="Popular post">
+                            <div class="post-info">
+                                <h4><a href="#">Sustainable Event Planning: A Complete Guide</a></h4>
+                                <span class="post-date">June 18, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget categories-widget" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul class="categories-list">
+                            <li><a href="#" data-category="catering">Catering Services <span>(12)</span></a></li>
+                            <li><a href="#" data-category="logistics">Transport & Logistics <span>(8)</span></a></li>
+                            <li><a href="#" data-category="consulting">Business Consulting <span>(15)</span></a></li>
+                            <li><a href="#" data-category="events">Event Management <span>(10)</span></a></li>
+                            <li><a href="#" data-category="tips">Tips & Guides <span>(18)</span></a></li>
+                            <li><a href="#" data-category="industry">Industry News <span>(6)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="sidebar-widget social-widget" data-aos="fade-up" data-aos-delay="500">
+                        <h3 class="widget-title">Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-widget tags-widget" data-aos="fade-up" data-aos-delay="600">
+                        <h3 class="widget-title">Popular Tags</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">Business Growth</a>
+                            <a href="#" class="tag">Corporate Catering</a>
+                            <a href="#" class="tag">Event Planning</a>
+                            <a href="#" class="tag">Logistics</a>
+                            <a href="#" class="tag">Consulting</a>
+                            <a href="#" class="tag">Productivity</a>
+                            <a href="#" class="tag">Innovation</a>
+                            <a href="#" class="tag">Kenya Business</a>
+                            <a href="#" class="tag">SME</a>
+                            <a href="#" class="tag">Workplace</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="newsletter-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <div class="cta-text">
+                    <h2>Never Miss an Update</h2>
+                    <p>Subscribe to our newsletter for the latest business insights, industry trends, and expert tips delivered straight to your inbox.</p>
+                </div>
+                <div class="cta-form">
+                    <form class="newsletter-signup" id="mainNewsletterForm">
+                        <div class="form-row">
+                            <input type="email" class="form-input" placeholder="Enter your email address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="assets/mindscope-logo.png" alt="Mindscope Services Ltd">
+                        <h3>Mindscope Services Ltd</h3>
+                    </div>
+                    <p>Empowering people and delivering excellence through comprehensive professional services.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/catering.html">Catering Services</a></li>
+                        <li><a href="services/logistics.html">Transport & Logistics</a></li>
+                        <li><a href="services/consulting.html">Business Consulting</a></li>
+                        <li><a href="services/events.html">Event Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Ridgeways, Kiambu Road, Nairobi</p>
+                        <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+                        <p><i class="fas fa-envelope"></i> info@mindscope.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindscope Services Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>
