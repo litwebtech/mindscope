@@ -1,0 +1,22 @@
+[2025-07-23 03:56:49] Starting comprehensive site testing
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/index.html - HTTP 200
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/about.html - HTTP 200
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/contact.html - HTTP 200
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/portfolio.html - HTTP 200
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/blog.html - HTTP 200
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/services/catering.html - HTTP 200
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/services/logistics.html - HTTP 200
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/services/consulting.html - HTTP 200
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/services/events.html - HTTP 200
+[2025-07-23 03:56:49] SUCCESS: http://localhost/mindscope/blog/future-corporate-catering-kenya.html - HTTP 200
+[2025-07-23 03:56:53] ERROR: http://localhost/mindscope/blog/business-growth-strategies.html - HTTP 404 (Failed after 3 attempts)
+[2025-07-23 03:56:57] ERROR: http://localhost/mindscope/blog/corporate-event-planning-guide.html - HTTP 404 (Failed after 3 attempts)
+[2025-07-23 03:57:01] ERROR: http://localhost/mindscope/blog/transport-efficiency-tips.html - HTTP 404 (Failed after 3 attempts)
+[2025-07-23 03:57:05] ERROR: http://localhost/mindscope/blog/healthy-workplace-meals.html - HTTP 404 (Failed after 3 attempts)
+[2025-07-23 03:57:09] ERROR: http://localhost/mindscope/blog/cost-effective-business-solutions.html - HTTP 404 (Failed after 3 attempts)
+[2025-07-23 03:57:13] ERROR: http://localhost/mindscope/blog/wedding-planning-trends-2025.html - HTTP 404 (Failed after 3 attempts)
+[2025-07-23 03:57:13] SUCCESS: http://localhost/mindscope/assets/mindscope-logo.png - HTTP 200
+[2025-07-23 03:57:13] SUCCESS: http://localhost/mindscope/css/styles.css - HTTP 200
+[2025-07-23 03:57:13] SUCCESS: http://localhost/mindscope/css/animations.css - HTTP 200
+[2025-07-23 03:57:13] SUCCESS: http://localhost/mindscope/js/main.js - HTTP 200
+[2025-07-23 03:57:13] SUCCESS: http://localhost/mindscope/js/ajax-forms.js - HTTP 200

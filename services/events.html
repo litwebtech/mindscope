@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Services - Mindscope Services Ltd</title>
+    <meta name="description" content="Professional event management services in Kenya. Corporate events, weddings, conferences, and special occasions planned to perfection.">
+    <meta name="keywords" content="event management, wedding planning, corporate events, Kenya, conferences, party planning">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mindscope.co.ke/services/events.html">
+    <meta property="og:title" content="Event Management Services - Mindscope Services Ltd">
+    <meta property="og:description" content="Professional event management services in Kenya. Corporate events, weddings, conferences, and special occasions planned to perfection.">
+    <meta property="og:image" content="../assets/mindscope-logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/mindscope-logo.png" alt="Mindscope Services Ltd" class="logo">
+                <span class="logo-text">Mindscope Services Ltd</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about.html" class="nav-link">About Us</a>
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="catering.html" class="dropdown-link">Catering Services</a>
+                        <a href="logistics.html" class="dropdown-link">Transport & Logistics</a>
+                        <a href="consulting.html" class="dropdown-link">Business Consulting</a>
+                        <a href="events.html" class="dropdown-link active">Event Management</a>
+                    </div>
+                </div>
+                <a href="../portfolio.html" class="nav-link">Portfolio</a>
+                <a href="../blog.html" class="nav-link">Blog</a>
+                <a href="../contact.html" class="nav-link">Contact Us</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-background">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1 class="page-title">Event Management</h1>
+                <p class="page-subtitle">Creating memorable experiences through exceptional event planning and execution</p>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span>/</span>
+                    <a href="#services">Services</a>
+                    <span>/</span>
+                    <span>Event Management</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="service-overview">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>Exceptional Events, Every Time</h2>
+                    <p class="lead">From intimate gatherings to large-scale corporate events, we bring your vision to life with meticulous planning, creative design, and flawless execution that leaves lasting impressions.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <h4>Full-Service Planning</h4>
+                                <p>End-to-end event management from concept to completion</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-palette"></i>
+                            <div>
+                                <h4>Creative Design</h4>
+                                <p>Innovative themes and stunning visual experiences</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h4>Vendor Coordination</h4>
+                                <p>Seamless management of all suppliers and partners</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-content" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop" alt="Event Management Services" class="responsive-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Event Services</h2>
+                <p>Comprehensive event solutions for every occasion and scale</p>
+            </div>
+            
+            <div class="grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Events</h3>
+                    <p>Professional corporate gatherings that strengthen business relationships and showcase your brand.</p>
+                    <ul>
+                        <li>Conferences and seminars</li>
+                        <li>Product launches</li>
+                        <li>Annual general meetings</li>
+                        <li>Team building events</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Wedding Planning</h3>
+                    <p>Creating dream weddings with personalized touches that reflect your unique love story.</p>
+                    <ul>
+                        <li>Traditional and modern ceremonies</li>
+                        <li>Venue selection and decoration</li>
+                        <li>Vendor coordination</li>
+                        <li>Photography and videography</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Social Events</h3>
+                    <p>Memorable celebrations for life's special moments, from birthdays to anniversaries.</p>
+                    <ul>
+                        <li>Birthday celebrations</li>
+                        <li>Anniversary parties</li>
+                        <li>Graduation ceremonies</li>
+                        <li>Family reunions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Conferences & Summits</h3>
+                    <p>Large-scale professional gatherings with seamless logistics and engaging experiences.</p>
+                    <ul>
+                        <li>Multi-day conferences</li>
+                        <li>Industry summits</li>
+                        <li>Training workshops</li>
+                        <li>International forums</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Gala Dinners</h3>
+                    <p>Elegant dining experiences that combine exquisite cuisine with sophisticated ambiance.</p>
+                    <ul>
+                        <li>Award ceremonies</li>
+                        <li>Fundraising galas</li>
+                        <li>Corporate dinners</li>
+                        <li>VIP receptions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Product Launches</h3>
+                    <p>Impactful launch events that generate buzz and create lasting brand impressions.</p>
+                    <ul>
+                        <li>Brand activation events</li>
+                        <li>Media launches</li>
+                        <li>Customer preview events</li>
+                        <li>Interactive experiences</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Planning Process -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Event Planning Process</h2>
+                <p>A systematic approach that ensures every detail is perfect</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Consultation & Vision</h3>
+                        <p>We start by understanding your vision, objectives, and requirements to create a tailored event concept.</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Planning & Design</h3>
+                        <p>Detailed planning including venue selection, theme development, timeline creation, and budget management.</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Coordination & Setup</h3>
+                        <p>Managing all vendors, coordinating logistics, and overseeing setup to ensure everything is perfect.</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Execution & Support</h3>
+                        <p>On-site management during the event to ensure smooth execution and handle any unexpected situations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Why Choose Our Event Management?</h2>
+                <p>Experience the difference with our professional event services</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Award-Winning Team</h3>
+                    <p>Experienced event professionals with a proven track record of successful events.</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Extensive Network</h3>
+                    <p>Strong relationships with top vendors, venues, and suppliers across Kenya.</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Timely Execution</h3>
+                    <p>Meticulous planning and execution ensuring your event runs on schedule.</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-check"></i>
+                    </div>
+                    <h3>Risk Management</h3>
+                    <p>Comprehensive contingency planning to handle any unexpected situations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to Plan Your Perfect Event?</h2>
+                <p>Let's discuss your event vision and create an unforgettable experience together.</p>
+                <div class="cta-buttons">
+                    <a href="../contact.html" class="btn btn-primary">Plan My Event</a>
+                    <a href="../portfolio.html" class="btn btn-outline">View Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/mindscope-logo.png" alt="Mindscope Services Ltd">
+                        <h3>Mindscope Services Ltd</h3>
+                    </div>
+                    <p>Empowering people and delivering excellence through comprehensive professional services.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="catering.html">Catering Services</a></li>
+                        <li><a href="logistics.html">Transport & Logistics</a></li>
+                        <li><a href="consulting.html">Business Consulting</a></li>
+                        <li><a href="events.html">Event Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../portfolio.html">Portfolio</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Ridgeways, Kiambu Road, Nairobi</p>
+                        <p><i class="fas fa-phone"></i> +254 700 000 000</p>
+                        <p><i class="fas fa-envelope"></i> info@mindscope.co.ke</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindscope Services Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js"></script>
+    
+    <!-- Other Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/ajax-forms.js"></script>
+    <script src="../js/footer.js"></script>
+</body>
+</html>

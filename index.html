@@ -20,13 +20,16 @@
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="https://via.placeholder.com/200x60/4B002E/FFFFFF?text=Mindscope+Logo" alt="Mindscope Services Ltd" class="logo">
+                <img src="assets/mindscope-logo.png" alt="Mindscope Services Ltd" class="logo">
                 <span class="logo-text">Mindscope Services Ltd</span>
             </div>
             
@@ -296,7 +299,7 @@
                 <div class="footer-content">
                     <div class="footer-section footer-about">
                         <div class="footer-logo">
-                            <img src="https://via.placeholder.com/50x50/4B002E/FFFFFF?text=M" alt="Mindscope Services Ltd">
+                            <img src="assets/mindscope-logo.png" alt="Mindscope Services Ltd">
                             <h3>Mindscope Services Ltd</h3>
                         </div>
                         <p class="footer-description">
@@ -430,7 +433,7 @@
                             <p>Subscribe to our newsletter for latest updates and offers.</p>
                             <form class="newsletter-form" id="footerNewsletterForm">
                                 <div class="input-group">
-                                    <input type="email" class="form-input" placeholder="Enter your email" required>
+                                    <input type="email" name="email" class="form-input" placeholder="Enter your email" required>
                                     <button type="submit" class="btn btn-primary">
                                         <i class="fas fa-paper-plane"></i>
                                     </button>
@@ -481,7 +484,13 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Custom Scripts -->
     <script src="js/main.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/ajax-forms.js"></script>
 </body>
 </html>
