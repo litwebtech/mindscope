@@ -306,6 +306,12 @@
     transform: translateY(0);
 }
 
+/* Override for testimonials to be visible by default */
+.testimonial-content.scroll-reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 .scroll-reveal-left {
     opacity: 0;
     transform: translateX(-50px);

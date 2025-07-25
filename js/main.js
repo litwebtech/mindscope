@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Logo slider
     initLogoSlider();
+    
+    // Initialize Global WhatsApp Floating Button
+    addGlobalWhatsAppFloatingButton();
+    
+    // Heartbeat counter
+    initHeartbeatCounter();
 });
 
 // Navbar Scroll Effect
@@ -486,6 +492,63 @@ function openWhatsApp(message = 'Hello! I would like to know more about your ser
     window.open(whatsappURL, '_blank');
 }
 
+// Global WhatsApp Contact Function
+function contactWhatsApp() {
+    const currentPage = window.location.pathname;
+    let message = "Hello! I'm interested in your services. Could you please provide more information?";
+    
+    // Customize message based on current page
+    if (currentPage.includes('catering')) {
+        message = "Hello! I'm interested in your catering services. Could you please provide more information?";
+    } else if (currentPage.includes('logistics')) {
+        message = "Hello! I'm interested in your transport and logistics services. Could you please provide more information?";
+    } else if (currentPage.includes('consulting')) {
+        message = "Hello! I'm interested in your business consulting services. Could you please provide more information?";
+    } else if (currentPage.includes('events')) {
+        message = "Hello! I'm interested in your event management services. Could you please provide more information?";
+    } else if (currentPage.includes('wellness')) {
+        message = "Hello! I'm interested in your wellness and healing services. Could you please provide more information?";
+    } else if (currentPage.includes('about')) {
+        message = "Hello! I'd like to learn more about Mindscope Services Ltd and how you can help my business.";
+    } else if (currentPage.includes('contact')) {
+        message = "Hello! I'm looking to get in touch about your services.";
+    } else if (currentPage.includes('portfolio')) {
+        message = "Hello! I've seen your portfolio and I'm interested in working with you.";
+    } else if (currentPage.includes('blog')) {
+        message = "Hello! I read your blog and I'm interested in your services.";
+    }
+    
+    openWhatsApp(message);
+}
+
+// Add Global WhatsApp Floating Button
+function addGlobalWhatsAppFloatingButton() {
+    // Check if button already exists to prevent duplicates
+    if (document.querySelector('.whatsapp-float')) {
+        return;
+    }
+    
+    const whatsappBtn = document.createElement('div');
+    whatsappBtn.className = 'whatsapp-float';
+    whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+    whatsappBtn.onclick = contactWhatsApp;
+    whatsappBtn.title = 'Contact us on WhatsApp';
+    whatsappBtn.setAttribute('aria-label', 'Contact us on WhatsApp');
+    
+    // Add animation on load
+    whatsappBtn.style.opacity = '0';
+    whatsappBtn.style.transform = 'scale(0.5)';
+    
+    document.body.appendChild(whatsappBtn);
+    
+    // Animate in after a short delay
+    setTimeout(() => {
+        whatsappBtn.style.transition = 'all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+        whatsappBtn.style.opacity = '1';
+        whatsappBtn.style.transform = 'scale(1)';
+    }, 1000);
+}
+
 // Add WhatsApp click handlers
 document.addEventListener('click', function(e) {
     if (e.target.closest('.btn-whatsapp')) {
@@ -505,4 +568,32 @@ if ('serviceWorker' in navigator) {
                 console.log('SW registration failed: ', registrationError);
             });
     });
+}
+
+// Heartbeat Counter Animation
+function initHeartbeatCounter() {
+    const beatNumberElement = document.querySelector('.beat-number');
+    
+    if (!beatNumberElement) return;
+    
+    let currentBeat = 1;
+    const maxBeats = 72;
+    const beatInterval = 833; // 833ms for 72 BPM (60000ms / 72 beats)
+    
+    function updateCounter() {
+        // Update the counter display
+        beatNumberElement.textContent = currentBeat;
+        
+        // Increment the counter
+        currentBeat++;
+        
+        // Reset to 1 when reaching 72
+        if (currentBeat > maxBeats) {
+            currentBeat = 1;
+        }
+    }
+    
+    // Start the counter animation
+    updateCounter(); // Initial update
+    setInterval(updateCounter, beatInterval);
 }

@@ -327,42 +327,32 @@ function initGalleryAnimations() {
 document.addEventListener('DOMContentLoaded', function() {
     initTestimonialsRotation();
     initGalleryAnimations();
-});
-
-// WhatsApp Quick Contact for Catering
-function contactCateringWhatsApp() {
-    const message = "Hello! I'm interested in your catering services. Could you please provide more information?";
-    openWhatsApp(message);
-}
-
-// Add WhatsApp floating button
-function addWhatsAppFloatingButton() {
-    const whatsappBtn = document.createElement('div');
-    whatsappBtn.className = 'whatsapp-float';
-    whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
-    whatsappBtn.onclick = contactCateringWhatsApp;
-    whatsappBtn.title = 'Contact us on WhatsApp';
     
-    document.body.appendChild(whatsappBtn);
-}
-
-// Initialize WhatsApp button
-document.addEventListener('DOMContentLoaded', function() {
-    addWhatsAppFloatingButton();
-});
-
-// Service comparison functionality
-function initServiceComparison() {
-    const compareBtn = document.createElement('button');
-    compareBtn.className = 'btn btn-outline compare-services-btn';
-    compareBtn.textContent = 'Compare Services';
-    compareBtn.onclick = showServiceComparison;
-    
-    const serviceSection = document.querySelector('.our-services .container');
-    if (serviceSection) {
-        serviceSection.appendChild(compareBtn);
+    // Initialize Professional Slideshow
+    const slideshowElement = document.querySelector('.professional-slideshow');
+    if (slideshowElement && typeof ProfessionalSlideshow !== 'undefined') {
+        new ProfessionalSlideshow(slideshowElement, {
+            autoPlay: true,
+            autoPlayDelay: 6000,
+            showProgress: true,
+            showDots: true,
+            showArrows: true
+        });
     }
-}
+});
+
+// // Service comparison functionality
+// function initServiceComparison() {
+//     const compareBtn = document.createElement('button');
+//     compareBtn.className = 'btn btn-outline compare-services-btn';
+//     compareBtn.textContent = 'Compare Services';
+//     compareBtn.onclick = showServiceComparison;
+    
+//     const serviceSection = document.querySelector('.our-services .container');
+//     if (serviceSection) {
+//         serviceSection.appendChild(compareBtn);
+//     }
+// }
 
 function showServiceComparison() {
     const modal = document.createElement('div');

@@ -1,528 +1,285 @@
--- ====================================
--- Mindscope Services Website Database
--- ====================================
+-- Mindscope Services Ltd Database Schema
+-- Updated with comprehensive tables for all forms and features
 SET
   SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
+SET
+  AUTOCOMMIT = 0;
 
 START TRANSACTION;
 
 SET
   time_zone = "+00:00";
 
--- Create database
+-- Database: mindscope_db
 CREATE DATABASE IF NOT EXISTS `mindscope_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 USE `mindscope_db`;
 
--- ====================================
--- Contact Messages Table
--- ====================================
+-- --------------------------------------------------------
+-- Table structure for table `contact_messages`
 CREATE TABLE
   `contact_messages` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `name` varchar(100) NOT NULL,
-    `email` varchar(150) NOT NULL,
+    `email` varchar(100) NOT NULL,
     `phone` varchar(20) DEFAULT NULL,
-    `company` varchar(100) DEFAULT NULL,
     `subject` varchar(200) NOT NULL,
     `message` text NOT NULL,
-    `status` enum('new', 'read', 'replied', 'archived') DEFAULT 'new',
-    `submitted_at` timestamp NOT NULL DEFAULT current_timestamp(),
+    `service_type` varchar(50) DEFAULT NULL,
+    `newsletter_opt_in` tinyint(1) DEFAULT 0,
     `ip_address` varchar(45) DEFAULT NULL,
     `user_agent` text DEFAULT NULL,
+    `status` enum('unread', 'read', 'replied', 'archived') DEFAULT 'unread',
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
-    INDEX `idx_status` (`status`),
-    INDEX `idx_submitted_at` (`submitted_at`),
-    INDEX `idx_email` (`email`)
+    KEY `idx_email` (`email`),
+    KEY `idx_created_at` (`created_at`),
+    KEY `idx_status` (`status`)
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
--- ====================================
--- Quote Requests Table (Catering)
--- ====================================
+-- --------------------------------------------------------
+-- Table structure for table `quote_requests`
 CREATE TABLE
   `quote_requests` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `name` varchar(100) NOT NULL,
-    `email` varchar(150) NOT NULL,
+    `email` varchar(100) NOT NULL,
     `phone` varchar(20) DEFAULT NULL,
     `company` varchar(100) DEFAULT NULL,
-    `event_type` varchar(100) NOT NULL,
-    `event_date` date NOT NULL,
-    `guests` int(11) NOT NULL,
-    `budget` varchar(50) DEFAULT NULL,
-    `location` varchar(200) DEFAULT NULL,
-    `special_requirements` text DEFAULT NULL,
-    `status` enum(
-      'new',
-      'quoted',
-      'confirmed',
-      'completed',
-      'cancelled'
-    ) DEFAULT 'new',
-    `estimated_cost` decimal(10, 2) DEFAULT NULL,
-    `notes` text DEFAULT NULL,
-    `submitted_at` timestamp NOT NULL DEFAULT current_timestamp(),
+    `form_type` enum('catering', 'events', 'logistics', 'consulting') NOT NULL,
+    `service_details` json DEFAULT NULL,
+    `message` text DEFAULT NULL,
     `ip_address` varchar(45) DEFAULT NULL,
+    `user_agent` text DEFAULT NULL,
+    `status` enum(
+      'pending',
+      'reviewed',
+      'quoted',
+      'accepted',
+      'rejected',
+      'completed'
+    ) DEFAULT 'pending',
+    `quote_amount` decimal(10, 2) DEFAULT NULL,
+    `quote_notes` text DEFAULT NULL,
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
-    INDEX `idx_status` (`status`),
-    INDEX `idx_event_date` (`event_date`),
-    INDEX `idx_submitted_at` (`submitted_at`),
-    INDEX `idx_email` (`email`)
+    KEY `idx_email` (`email`),
+    KEY `idx_form_type` (`form_type`),
+    KEY `idx_created_at` (`created_at`),
+    KEY `idx_status` (`status`)
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
--- ====================================
--- Newsletter Subscribers Table
--- ====================================
+-- --------------------------------------------------------
+-- Table structure for table `wellness_consultations`
+CREATE TABLE
+  `wellness_consultations` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(100) NOT NULL,
+    `email` varchar(100) NOT NULL,
+    `phone` varchar(20) DEFAULT NULL,
+    `company` varchar(100) DEFAULT NULL,
+    `programme_type` varchar(100) NOT NULL,
+    `urgency_level` enum('low', 'medium', 'high', 'urgent') NOT NULL,
+    `main_concerns` text NOT NULL,
+    `preferred_date` date DEFAULT NULL,
+    `preferred_time` varchar(20) DEFAULT NULL,
+    `consultation_type` enum(
+      'individual',
+      'group',
+      'corporate',
+      'online',
+      'in-person'
+    ) DEFAULT NULL,
+    `previous_experience` text DEFAULT NULL,
+    `specific_goals` text DEFAULT NULL,
+    `budget_range` varchar(50) DEFAULT NULL,
+    `privacy_consent` tinyint(1) NOT NULL DEFAULT 0,
+    `ip_address` varchar(45) DEFAULT NULL,
+    `user_agent` text DEFAULT NULL,
+    `status` enum(
+      'pending',
+      'scheduled',
+      'in-progress',
+      'completed',
+      'cancelled'
+    ) DEFAULT 'pending',
+    `consultation_date` datetime DEFAULT NULL,
+    `consultant_notes` text DEFAULT NULL,
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`),
+    KEY `idx_email` (`email`),
+    KEY `idx_urgency_level` (`urgency_level`),
+    KEY `idx_created_at` (`created_at`),
+    KEY `idx_status` (`status`),
+    KEY `idx_programme_type` (`programme_type`)
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+-- Table structure for table `newsletter_subscribers`
 CREATE TABLE
   `newsletter_subscribers` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `email` varchar(150) NOT NULL UNIQUE,
-    `status` enum('active', 'unsubscribed', 'bounced') DEFAULT 'active',
-    `subscribed_at` timestamp NOT NULL DEFAULT current_timestamp(),
-    `unsubscribed_at` timestamp NULL DEFAULT NULL,
-    `ip_address` varchar(45) DEFAULT NULL,
+    `email` varchar(100) NOT NULL UNIQUE,
+    `name` varchar(100) DEFAULT NULL,
     `source` varchar(50) DEFAULT 'website',
-    `preferences` json DEFAULT NULL,
+    `status` enum('active', 'inactive', 'unsubscribed', 'bounced') DEFAULT 'active',
+    `ip_address` varchar(45) DEFAULT NULL,
+    `user_agent` text DEFAULT NULL,
+    `subscribed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `unsubscribed_at` timestamp NULL DEFAULT NULL,
+    `last_email_sent` timestamp NULL DEFAULT NULL,
+    `email_count` int(11) DEFAULT 0,
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
     UNIQUE KEY `unique_email` (`email`),
-    INDEX `idx_status` (`status`),
-    INDEX `idx_subscribed_at` (`subscribed_at`)
+    KEY `idx_status` (`status`),
+    KEY `idx_subscribed_at` (`subscribed_at`)
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
--- ====================================
--- Blog Posts Table
--- ====================================
+-- --------------------------------------------------------
+-- Table structure for table `faq_contacts`
 CREATE TABLE
-  `blog_posts` (
+  `faq_contacts` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `title` varchar(255) NOT NULL,
-    `slug` varchar(255) NOT NULL UNIQUE,
-    `excerpt` text DEFAULT NULL,
-    `content` longtext NOT NULL,
-    `featured_image` varchar(255) DEFAULT NULL,
-    `author_name` varchar(100) NOT NULL,
-    `author_email` varchar(150) DEFAULT NULL,
-    `author_bio` text DEFAULT NULL,
-    `category` varchar(100) DEFAULT NULL,
-    `tags` json DEFAULT NULL,
-    `status` enum('draft', 'published', 'archived') DEFAULT 'draft',
-    `published_at` timestamp NULL DEFAULT NULL,
-    `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-    `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    `views` int(11) DEFAULT 0,
-    `meta_description` varchar(160) DEFAULT NULL,
-    `meta_keywords` varchar(255) DEFAULT NULL,
+    `name` varchar(100) NOT NULL,
+    `email` varchar(100) NOT NULL,
+    `question` text NOT NULL,
+    `category` varchar(50) DEFAULT 'general',
+    `ip_address` varchar(45) DEFAULT NULL,
+    `user_agent` text DEFAULT NULL,
+    `status` enum('pending', 'answered', 'archived') DEFAULT 'pending',
+    `admin_response` text DEFAULT NULL,
+    `responded_at` timestamp NULL DEFAULT NULL,
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
-    UNIQUE KEY `unique_slug` (`slug`),
-    INDEX `idx_status` (`status`),
-    INDEX `idx_published_at` (`published_at`),
-    INDEX `idx_category` (`category`),
-    FULLTEXT KEY `fulltext_search` (`title`, `content`, `excerpt`)
+    KEY `idx_email` (`email`),
+    KEY `idx_category` (`category`),
+    KEY `idx_status` (`status`),
+    KEY `idx_created_at` (`created_at`)
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
--- ====================================
--- Portfolio Items Table
--- ====================================
+-- --------------------------------------------------------
+-- Table structure for table `portfolio_items`
 CREATE TABLE
   `portfolio_items` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `title` varchar(255) NOT NULL,
-    `slug` varchar(255) NOT NULL UNIQUE,
+    `title` varchar(200) NOT NULL,
     `description` text DEFAULT NULL,
-    `category` varchar(100) NOT NULL,
+    `category` enum(
+      'catering',
+      'events',
+      'logistics',
+      'consulting',
+      'wellness'
+    ) NOT NULL,
     `client_name` varchar(100) DEFAULT NULL,
     `project_date` date DEFAULT NULL,
-    `featured_image` varchar(255) DEFAULT NULL,
+    `image_url` varchar(500) DEFAULT NULL,
     `gallery_images` json DEFAULT NULL,
-    `project_details` json DEFAULT NULL,
-    `status` enum('active', 'inactive', 'featured') DEFAULT 'active',
-    `sort_order` int(11) DEFAULT 0,
-    `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-    `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    `project_details` text DEFAULT NULL,
+    `technologies_used` text DEFAULT NULL,
+    `challenges` text DEFAULT NULL,
+    `solutions` text DEFAULT NULL,
+    `results` text DEFAULT NULL,
+    `testimonial` text DEFAULT NULL,
+    `testimonial_author` varchar(100) DEFAULT NULL,
+    `testimonial_position` varchar(100) DEFAULT NULL,
+    `featured` tinyint(1) DEFAULT 0,
+    `status` enum('draft', 'published', 'archived') DEFAULT 'published',
+    `seo_title` varchar(200) DEFAULT NULL,
+    `seo_description` text DEFAULT NULL,
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
-    UNIQUE KEY `unique_slug` (`slug`),
-    INDEX `idx_category` (`category`),
-    INDEX `idx_status` (`status`),
-    INDEX `idx_sort_order` (`sort_order`)
+    KEY `idx_category` (`category`),
+    KEY `idx_featured` (`featured`),
+    KEY `idx_status` (`status`),
+    KEY `idx_project_date` (`project_date`)
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
--- ====================================
--- Services Table
--- ====================================
-CREATE TABLE
-  `services` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `name` varchar(100) NOT NULL,
-    `slug` varchar(100) NOT NULL UNIQUE,
-    `description` text DEFAULT NULL,
-    `short_description` varchar(255) DEFAULT NULL,
-    `icon` varchar(50) DEFAULT NULL,
-    `featured_image` varchar(255) DEFAULT NULL,
-    `features` json DEFAULT NULL,
-    `pricing_info` json DEFAULT NULL,
-    `status` enum('active', 'inactive') DEFAULT 'active',
-    `sort_order` int(11) DEFAULT 0,
-    `meta_description` varchar(160) DEFAULT NULL,
-    `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-    `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    PRIMARY KEY (`id`),
-    UNIQUE KEY `unique_slug` (`slug`),
-    INDEX `idx_status` (`status`),
-    INDEX `idx_sort_order` (`sort_order`)
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
--- ====================================
--- Testimonials Table
--- ====================================
-CREATE TABLE
-  `testimonials` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `client_name` varchar(100) NOT NULL,
-    `client_title` varchar(100) DEFAULT NULL,
-    `client_company` varchar(100) DEFAULT NULL,
-    `client_image` varchar(255) DEFAULT NULL,
-    `testimonial` text NOT NULL,
-    `rating` tinyint(1) DEFAULT 5 CHECK (
-      `rating` >= 1
-      AND `rating` <= 5
-    ),
-    `service_category` varchar(100) DEFAULT NULL,
-    `status` enum('active', 'inactive', 'featured') DEFAULT 'active',
-    `sort_order` int(11) DEFAULT 0,
-    `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-    `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    PRIMARY KEY (`id`),
-    INDEX `idx_status` (`status`),
-    INDEX `idx_service_category` (`service_category`),
-    INDEX `idx_sort_order` (`sort_order`)
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
--- ====================================
--- FAQ Table
--- ====================================
-CREATE TABLE
-  `faqs` (
-    `id` int(11) NOT NULL AUTO_INCREMENT,
-    `question` varchar(255) NOT NULL,
-    `answer` text NOT NULL,
-    `category` varchar(100) DEFAULT 'general',
-    `status` enum('active', 'inactive') DEFAULT 'active',
-    `sort_order` int(11) DEFAULT 0,
-    `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-    `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-    PRIMARY KEY (`id`),
-    INDEX `idx_category` (`category`),
-    INDEX `idx_status` (`status`),
-    INDEX `idx_sort_order` (`sort_order`)
-  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
--- ====================================
--- Admin Users Table
--- ====================================
+-- --------------------------------------------------------
+-- Table structure for table `admin_users`
 CREATE TABLE
   `admin_users` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `username` varchar(50) NOT NULL UNIQUE,
-    `email` varchar(150) NOT NULL UNIQUE,
+    `email` varchar(100) NOT NULL UNIQUE,
     `password_hash` varchar(255) NOT NULL,
     `full_name` varchar(100) NOT NULL,
-    `role` enum('admin', 'editor', 'viewer') DEFAULT 'editor',
-    `status` enum('active', 'inactive', 'suspended') DEFAULT 'active',
+    `role` enum('super_admin', 'admin', 'manager', 'viewer') DEFAULT 'admin',
+    `permissions` json DEFAULT NULL,
     `last_login` timestamp NULL DEFAULT NULL,
-    `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-    `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    `login_attempts` int(11) DEFAULT 0,
+    `locked_until` timestamp NULL DEFAULT NULL,
+    `password_reset_token` varchar(255) DEFAULT NULL,
+    `password_reset_expires` timestamp NULL DEFAULT NULL,
+    `email_verified` tinyint(1) DEFAULT 0,
+    `email_verification_token` varchar(255) DEFAULT NULL,
+    `status` enum('active', 'inactive', 'suspended') DEFAULT 'active',
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
     UNIQUE KEY `unique_username` (`username`),
     UNIQUE KEY `unique_email` (`email`),
-    INDEX `idx_status` (`status`),
-    INDEX `idx_role` (`role`)
+    KEY `idx_role` (`role`),
+    KEY `idx_status` (`status`)
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
--- ====================================
--- Site Settings Table
--- ====================================
+-- --------------------------------------------------------
+-- Table structure for table `site_settings`
 CREATE TABLE
   `site_settings` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `setting_key` varchar(100) NOT NULL UNIQUE,
     `setting_value` text DEFAULT NULL,
-    `setting_type` enum('text', 'number', 'boolean', 'json', 'file') DEFAULT 'text',
-    `description` varchar(255) DEFAULT NULL,
-    `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    `setting_type` enum(
+      'text',
+      'number',
+      'boolean',
+      'json',
+      'email',
+      'url'
+    ) DEFAULT 'text',
+    `description` text DEFAULT NULL,
+    `category` varchar(50) DEFAULT 'general',
+    `is_public` tinyint(1) DEFAULT 0,
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
-    UNIQUE KEY `unique_setting_key` (`setting_key`)
+    UNIQUE KEY `unique_setting_key` (`setting_key`),
+    KEY `idx_category` (`category`),
+    KEY `idx_is_public` (`is_public`)
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
--- ====================================
--- Email Templates Table
--- ====================================
+-- --------------------------------------------------------
+-- Table structure for table `activity_logs`
 CREATE TABLE
-  `email_templates` (
+  `activity_logs` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `template_key` varchar(100) NOT NULL UNIQUE,
-    `subject` varchar(255) NOT NULL,
-    `body_html` longtext NOT NULL,
-    `body_text` text DEFAULT NULL,
-    `variables` json DEFAULT NULL,
-    `status` enum('active', 'inactive') DEFAULT 'active',
-    `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-    `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+    `user_id` int(11) DEFAULT NULL,
+    `action` varchar(100) NOT NULL,
+    `description` text DEFAULT NULL,
+    `ip_address` varchar(45) DEFAULT NULL,
+    `user_agent` text DEFAULT NULL,
+    `context_data` json DEFAULT NULL,
+    `severity` enum('info', 'warning', 'error', 'critical') DEFAULT 'info',
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
-    UNIQUE KEY `unique_template_key` (`template_key`),
-    INDEX `idx_status` (`status`)
+    KEY `idx_user_id` (`user_id`),
+    KEY `idx_action` (`action`),
+    KEY `idx_severity` (`severity`),
+    KEY `idx_created_at` (`created_at`),
+    FOREIGN KEY (`user_id`) REFERENCES `admin_users` (`id`) ON DELETE SET NULL
   ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
--- ====================================
--- Insert Sample Data
--- ====================================
--- Sample Services
-INSERT INTO
-  `services` (
-    `name`,
-    `slug`,
-    `description`,
-    `short_description`,
-    `icon`,
-    `status`,
-    `sort_order`
-  )
-VALUES
-  (
-    'Catering Services',
-    'catering',
-    'Professional catering for events, corporate meals, and weekly meal plans with trained chefs and quality ingredients.',
-    'Professional event & corporate catering',
-    'fas fa-utensils',
-    'active',
-    1
-  ),
-  (
-    'Transport & Logistics',
-    'logistics',
-    'Reliable transportation solutions including group transport, personal drivers, and local errand services.',
-    'Reliable transport solutions',
-    'fas fa-truck',
-    'active',
-    2
-  ),
-  (
-    'Business Consulting',
-    'consulting',
-    'Strategic consulting, coaching, branding, system setups, and business registration services.',
-    'Strategic growth & consulting',
-    'fas fa-chart-line',
-    'active',
-    3
-  ),
-  (
-    'Event Management',
-    'events',
-    'Complete event planning and management from corporate conferences to social celebrations.',
-    'Complete event planning',
-    'fas fa-calendar-alt',
-    'active',
-    4
-  );
-
--- Sample Testimonials
-INSERT INTO
-  `testimonials` (
-    `client_name`,
-    `client_title`,
-    `client_company`,
-    `testimonial`,
-    `rating`,
-    `service_category`,
-    `status`,
-    `sort_order`
-  )
-VALUES
-  (
-    'Sarah Kimani',
-    'CEO',
-    'TechHub Nairobi',
-    'Mindscope Services has been instrumental in transforming our corporate catering experience. Their attention to detail and professional service is unmatched.',
-    5,
-    'catering',
-    'featured',
-    1
-  ),
-  (
-    'Michael Otieno',
-    'Founder',
-    'GreenTech Solutions',
-    'The business consulting services helped us streamline our operations and achieve 200% growth in just one year. Highly recommended!',
-    5,
-    'consulting',
-    'featured',
-    2
-  ),
-  (
-    'Grace Wanjiku',
-    'Operations Manager',
-    'Summit Corporation',
-    'From transport logistics to event management, Mindscope delivers excellence consistently. They\'re our go-to partner for all corporate needs.',
-    5,
-    'logistics',
-    'featured',
-    3
-  );
-
--- Sample FAQs
-INSERT INTO
-  `faqs` (
-    `question`,
-    `answer`,
-    `category`,
-    `status`,
-    `sort_order`
-  )
-VALUES
-  (
-    'What types of events do you cater for?',
-    'We cater for all types of events including corporate conferences, weddings, birthday parties, product launches, and social gatherings. Our team can handle events from 10 to 1000+ guests.',
-    'catering',
-    'active',
-    1
-  ),
-  (
-    'How far in advance should I book your services?',
-    'We recommend booking at least 2-3 weeks in advance for regular events and 1-2 months for large events or during peak seasons. However, we can accommodate last-minute requests based on availability.',
-    'general',
-    'active',
-    2
-  ),
-  (
-    'Do you provide transportation outside Nairobi?',
-    'Yes, we provide transportation services throughout Kenya. Our fleet includes vehicles suitable for different group sizes and we can arrange inter-city travel as well as local transport.',
-    'logistics',
-    'active',
-    3
-  ),
-  (
-    'What is included in your business consulting services?',
-    'Our business consulting includes strategic planning, business registration, branding, system setup, process optimization, financial planning, and ongoing coaching support.',
-    'consulting',
-    'active',
-    4
-  ),
-  (
-    'Do you offer customized catering menus?',
-    'Absolutely! We work with you to create customized menus that suit your preferences, dietary requirements, budget, and event theme. Our chefs can prepare both local and international cuisines.',
-    'catering',
-    'active',
-    5
-  );
-
--- Sample Site Settings
-INSERT INTO
-  `site_settings` (
-    `setting_key`,
-    `setting_value`,
-    `setting_type`,
-    `description`
-  )
-VALUES
-  (
-    'site_name',
-    'Mindscope Services Ltd',
-    'text',
-    'Website name'
-  ),
-  (
-    'site_email',
-    'info@mindscopeservices.com',
-    'text',
-    'Main contact email'
-  ),
-  (
-    'admin_email',
-    'admin@mindscopeservices.com',
-    'text',
-    'Admin email for notifications'
-  ),
-  (
-    'phone_number',
-    '+254 700 000 000',
-    'text',
-    'Primary phone number'
-  ),
-  (
-    'address',
-    'Ridgeways, Kiambu Road, Nairobi, Kenya',
-    'text',
-    'Physical address'
-  ),
-  (
-    'business_hours',
-    'Monday - Friday: 8:00 AM - 6:00 PM',
-    'text',
-    'Business operating hours'
-  ),
-  (
-    'social_facebook',
-    'https://facebook.com/mindscopeservices',
-    'text',
-    'Facebook page URL'
-  ),
-  (
-    'social_twitter',
-    'https://twitter.com/mindscopeservices',
-    'text',
-    'Twitter profile URL'
-  ),
-  (
-    'social_linkedin',
-    'https://linkedin.com/company/mindscope-services',
-    'text',
-    'LinkedIn page URL'
-  ),
-  (
-    'social_instagram',
-    'https://instagram.com/mindscopeservices',
-    'text',
-    'Instagram profile URL'
-  ),
-  (
-    'whatsapp_number',
-    '254700000000',
-    'text',
-    'WhatsApp business number'
-  );
-
--- Sample Email Templates
-INSERT INTO
-  `email_templates` (
-    `template_key`,
-    `subject`,
-    `body_html`,
-    `variables`,
-    `status`
-  )
-VALUES
-  (
-    'contact_confirmation',
-    'Thank you for contacting Mindscope Services',
-    '<html><body style="font-family: Arial, sans-serif;"><h2 style="color: #4B002E;">Thank you for your message!</h2><p>Dear {{name}},</p><p>We have received your message and will get back to you within 24 hours.</p><p>Best regards,<br>Mindscope Services Team</p></body></html>',
-    '["name", "email", "message"]',
-    'active'
-  ),
-  (
-    'newsletter_welcome',
-    'Welcome to Mindscope Services Newsletter',
-    '<html><body style="font-family: Arial, sans-serif;"><h2 style="color: #4B002E;">Welcome to our Newsletter!</h2><p>Thank you for subscribing. You\'ll receive updates about our latest services, offers, and industry insights.</p></body></html>',
-    '["email"]',
-    'active'
-  ),
-  (
-    'quote_confirmation',
-    'Your Quote Request - Mindscope Services',
-    '<html><body style="font-family: Arial, sans-serif;"><h2 style="color: #4B002E;">Thank you for your quote request!</h2><p>Dear {{name}},</p><p>We have received your catering quote request and will send you a detailed quote within 24 hours.</p><p>Event Details:<br><strong>Type:</strong> {{event_type}}<br><strong>Date:</strong> {{event_date}}<br><strong>Guests:</strong> {{guests}}</p></body></html>',
-    '["name", "event_type", "event_date", "guests"]',
-    'active'
-  );
-
--- Create Default Admin User (password: admin123 - CHANGE THIS!)
+-- --------------------------------------------------------
+-- Insert default admin user (password: admin123 - should be changed immediately)
 INSERT INTO
   `admin_users` (
     `username`,
@@ -530,95 +287,331 @@ INSERT INTO
     `password_hash`,
     `full_name`,
     `role`,
-    `status`
+    `status`,
+    `email_verified`
   )
 VALUES
   (
     'admin',
     'admin@mindscopeservices.com',
-    '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+    '$2y$10$8K1p/a0dg9o89c.O.3mj.eRVcFhsO6FrqKq6ZZZhZZZhZZZhZZZhZ',
     'System Administrator',
-    'admin',
-    'active'
+    'super_admin',
+    'active',
+    1
   );
 
--- ====================================
--- Create Views for Reporting
--- ====================================
--- Contact Messages Summary View
-CREATE VIEW
-  `contact_messages_summary` AS
-SELECT
-  DATE(submitted_at) as date,
-  COUNT(*) as total_messages,
-  COUNT(
-    CASE
-      WHEN status = 'new' THEN 1
-    END
-  ) as new_messages,
-  COUNT(
-    CASE
-      WHEN status = 'replied' THEN 1
-    END
-  ) as replied_messages
-FROM
-  contact_messages
-GROUP BY
-  DATE(submitted_at)
-ORDER BY
-  date DESC;
-
--- Newsletter Subscribers Growth View
-CREATE VIEW
-  `newsletter_growth` AS
-SELECT
-  DATE(subscribed_at) as date,
-  COUNT(*) as new_subscribers,
+-- --------------------------------------------------------
+-- Insert default site settings
+INSERT INTO
+  `site_settings` (
+    `setting_key`,
+    `setting_value`,
+    `setting_type`,
+    `description`,
+    `category`,
+    `is_public`
+  )
+VALUES
   (
-    SELECT
-      COUNT(*)
-    FROM
-      newsletter_subscribers
-    WHERE
-      DATE(subscribed_at) <= DATE(ns.subscribed_at)
-      AND status = 'active'
-  ) as total_active
-FROM
-  newsletter_subscribers ns
-WHERE
-  status = 'active'
-GROUP BY
-  DATE(subscribed_at)
-ORDER BY
-  date DESC;
+    'site_name',
+    'Mindscope Services Ltd',
+    'text',
+    'Website name',
+    'general',
+    1
+  ),
+  (
+    'site_email',
+    'info@mindscopeservices.com',
+    'email',
+    'Primary contact email',
+    'contact',
+    1
+  ),
+  (
+    'admin_email',
+    'admin@mindscopeservices.com',
+    'email',
+    'Admin notification email',
+    'contact',
+    0
+  ),
+  (
+    'site_phone',
+    '+254 700 000 000',
+    'text',
+    'Primary contact phone',
+    'contact',
+    1
+  ),
+  (
+    'site_address',
+    'Nairobi, Kenya',
+    'text',
+    'Business address',
+    'contact',
+    1
+  ),
+  (
+    'maintenance_mode',
+    '0',
+    'boolean',
+    'Enable maintenance mode',
+    'system',
+    0
+  ),
+  (
+    'allow_registrations',
+    '1',
+    'boolean',
+    'Allow new user registrations',
+    'system',
+    0
+  ),
+  (
+    'max_file_upload_size',
+    '10485760',
+    'number',
+    'Maximum file upload size in bytes',
+    'system',
+    0
+  ),
+  (
+    'email_notifications',
+    '1',
+    'boolean',
+    'Enable email notifications',
+    'notifications',
+    0
+  ),
+  (
+    'contact_form_enabled',
+    '1',
+    'boolean',
+    'Enable contact form',
+    'forms',
+    1
+  ),
+  (
+    'newsletter_enabled',
+    '1',
+    'boolean',
+    'Enable newsletter subscriptions',
+    'forms',
+    1
+  ),
+  (
+    'quote_forms_enabled',
+    '1',
+    'boolean',
+    'Enable quote request forms',
+    'forms',
+    1
+  ),
+  (
+    'wellness_consultations_enabled',
+    '1',
+    'boolean',
+    'Enable wellness consultations',
+    'forms',
+    1
+  );
 
--- Quote Requests Summary View
+-- --------------------------------------------------------
+-- Sample portfolio items
+INSERT INTO
+  `portfolio_items` (
+    `title`,
+    `description`,
+    `category`,
+    `client_name`,
+    `project_date`,
+    `project_details`,
+    `featured`,
+    `status`
+  )
+VALUES
+  (
+    'Corporate Event Catering',
+    'Full-service catering for 200+ attendees at annual company conference',
+    'catering',
+    'Tech Solutions Ltd',
+    '2024-01-15',
+    'Provided comprehensive catering services including breakfast, lunch, and coffee breaks for a 3-day corporate conference.',
+    1,
+    'published'
+  ),
+  (
+    'Wedding Reception Management',
+    'Complete event planning and logistics for luxury wedding celebration',
+    'events',
+    'Private Client',
+    '2024-02-20',
+    'End-to-end event management including venue coordination, vendor management, and day-of execution.',
+    1,
+    'published'
+  ),
+  (
+    'Supply Chain Optimization',
+    'Logistics consulting for manufacturing company to reduce costs by 30%',
+    'logistics',
+    'Manufacturing Corp',
+    '2024-03-10',
+    'Comprehensive analysis and optimization of supply chain processes resulting in significant cost savings.',
+    1,
+    'published'
+  ),
+  (
+    'Business Process Consulting',
+    'Digital transformation strategy for financial services firm',
+    'consulting',
+    'Finance Group',
+    '2024-01-25',
+    'Strategic consulting to modernize business processes and implement digital solutions.',
+    1,
+    'published'
+  ),
+  (
+    'Corporate Wellness Program',
+    'Employee wellness initiative for 500+ staff members',
+    'wellness',
+    'Healthcare Organization',
+    '2024-02-15',
+    'Comprehensive wellness program including stress management, nutrition counseling, and fitness initiatives.',
+    1,
+    'published'
+  );
+
+-- --------------------------------------------------------
+-- Table structure for table `faq_contacts`
+CREATE TABLE
+  `faq_contacts` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(100) NOT NULL,
+    `email` varchar(255) NOT NULL,
+    `question` text NOT NULL,
+    `category` varchar(50) DEFAULT 'general',
+    `answer` text DEFAULT NULL,
+    `answered_by` varchar(100) DEFAULT NULL,
+    `answered_at` timestamp NULL DEFAULT NULL,
+    `status` enum('pending', 'answered', 'archived') DEFAULT 'pending',
+    `ip_address` varchar(45) DEFAULT NULL,
+    `user_agent` text DEFAULT NULL,
+    `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`),
+    KEY `idx_email` (`email`),
+    KEY `idx_category` (`category`),
+    KEY `idx_status` (`status`),
+    KEY `idx_created_at` (`created_at`)
+  ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+-- Create indexes for better performance
+ALTER TABLE `contact_messages`
+ADD INDEX `idx_service_newsletter` (`service_type`, `newsletter_opt_in`);
+
+ALTER TABLE `quote_requests`
+ADD INDEX `idx_company_status` (`company`, `status`);
+
+ALTER TABLE `wellness_consultations`
+ADD INDEX `idx_consultation_date` (`consultation_date`);
+
+ALTER TABLE `newsletter_subscribers`
+ADD INDEX `idx_source_status` (`source`, `status`);
+
+ALTER TABLE `portfolio_items`
+ADD INDEX `idx_category_featured` (`category`, `featured`);
+
+-- --------------------------------------------------------
+-- Create views for common queries
 CREATE VIEW
-  `quote_requests_summary` AS
+  `active_subscribers` AS
 SELECT
-  DATE(submitted_at) as date,
-  COUNT(*) as total_requests,
-  COUNT(
-    CASE
-      WHEN status = 'new' THEN 1
-    END
-  ) as new_requests,
-  COUNT(
-    CASE
-      WHEN status = 'quoted' THEN 1
-    END
-  ) as quoted_requests,
-  COUNT(
-    CASE
-      WHEN status = 'confirmed' THEN 1
-    END
-  ) as confirmed_requests,
-  AVG(estimated_cost) as avg_estimated_cost
+  `id`,
+  `email`,
+  `name`,
+  `source`,
+  `subscribed_at`,
+  `last_email_sent`,
+  `email_count`
 FROM
-  quote_requests
-GROUP BY
-  DATE(submitted_at)
-ORDER BY
-  date DESC;
+  `newsletter_subscribers`
+WHERE
+  `status` = 'active';
 
+CREATE VIEW
+  `pending_quotes` AS
+SELECT
+  `id`,
+  `name`,
+  `email`,
+  `phone`,
+  `company`,
+  `form_type`,
+  `service_details`,
+  `created_at`
+FROM
+  `quote_requests`
+WHERE
+  `status` = 'pending'
+ORDER BY
+  `created_at` DESC;
+
+CREATE VIEW
+  `urgent_wellness_consultations` AS
+SELECT
+  `id`,
+  `name`,
+  `email`,
+  `phone`,
+  `programme_type`,
+  `urgency_level`,
+  `main_concerns`,
+  `created_at`
+FROM
+  `wellness_consultations`
+WHERE
+  `urgency_level` = 'urgent'
+  AND `status` = 'pending'
+ORDER BY
+  `created_at` ASC;
+
+CREATE VIEW
+  `unread_contacts` AS
+SELECT
+  `id`,
+  `name`,
+  `email`,
+  `subject`,
+  `service_type`,
+  `created_at`
+FROM
+  `contact_messages`
+WHERE
+  `status` = 'unread'
+ORDER BY
+  `created_at` DESC;
+
+CREATE VIEW
+  `pending_faq_questions` AS
+SELECT
+  `id`,
+  `name`,
+  `email`,
+  `question`,
+  `category`,
+  `created_at`
+FROM
+  `faq_contacts`
+WHERE
+  `status` = 'pending'
+ORDER BY
+  `created_at` ASC;
+
+-- --------------------------------------------------------
+-- Commit the transaction
 COMMIT;
+
+-- Set character set
+SET NAMES utf8mb4;

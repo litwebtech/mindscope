@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness & Healing Programme - Mindscope Services Ltd</title>
+    <meta name="description" content="Comprehensive wellness and healing programmes for leaders, couples, and communities. Transform your mental, emotional, and spiritual well-being with expert guidance.">
+    <meta name="keywords" content="wellness programme, healing services, leadership wellness, couples therapy, community wellness, mental health, Nairobi, Kenya">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/mindscope-logo.png" alt="Mindscope Services Ltd" class="logo">
+                <span class="logo-text">Mindscope Services Ltd</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about.html" class="nav-link">About Us</a>
+                <div class="nav-dropdown">
+                    <a href="#services" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="catering.html" class="dropdown-link">Catering Services</a>
+                        <a href="logistics.html" class="dropdown-link">Transport & Logistics</a>
+                        <a href="consulting.html" class="dropdown-link">Business Consulting</a>
+                        <a href="events.html" class="dropdown-link">Event Management</a>
+                        <a href="wellness.html" class="dropdown-link active">Wellness & Healing</a>
+                    </div>
+                </div>
+                <a href="../portfolio.html" class="nav-link">Portfolio</a>
+                <!-- <a href="../blog.html" class="nav-link">Blog</a> -->
+                <a href="../contact.html" class="nav-link">Contact Us</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="service-badge">
+                    <i class="fas fa-heart"></i>
+                    <span>Wellness & Healing</span>
+                </div>
+                <h1 class="hero-title">Mindscope Wellness & Healing Programme</h1>
+                <p class="hero-subtitle">A Comprehensive Wholeness Journey for Leaders, Couples & Communities</p>
+                <p class="hero-description">
+                    Transform your mental, emotional, physical, and spiritual well-being through our evidence-based wellness programmes designed for sustainable healing and personal growth.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Lives Transformed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support Available</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Start Your Journey</a>
+                    <a href="#programmes" class="btn btn-secondary">Explore Programmes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="service-overview">
+        <div class="container">
+            <div class="section-content">
+                <div class="content-text" data-aos="fade-right">
+                    <h2 class="section-title">Holistic Wellness Solutions</h2>
+                    <p class="section-description">
+                        Our Wellness & Healing Programme addresses the complete spectrum of human wellness through a holistic approach that integrates mental health, emotional balance, physical vitality, and spiritual growth. We combine evidence-based therapeutic interventions with traditional healing practices to provide comprehensive care tailored to your unique needs.
+                    </p>
+                    <div class="wellness-pillars">
+                        <div class="pillar-item">
+                            <div class="pillar-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="pillar-content">
+                                <h4>Mental Health</h4>
+                                <p>Cognitive therapy, stress management, and mental clarity enhancement</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <div class="pillar-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="pillar-content">
+                                <h4>Emotional Wellness</h4>
+                                <p>Emotional regulation, trauma healing, and relationship therapy</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <div class="pillar-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="pillar-content">
+                                <h4>Physical Vitality</h4>
+                                <p>Holistic health practices, nutrition guidance, and body wellness</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <div class="pillar-icon">
+                                <i class="fas fa-om"></i>
+                            </div>
+                            <div class="pillar-content">
+                                <h4>Spiritual Growth</h4>
+                                <p>Mindfulness practices, meditation, and spiritual guidance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-image" data-aos="fade-left">
+                    <div class="wellness-image-grid">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Person meditating in nature, mindfulness practice" class="grid-image">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Therapist and client in a counseling session" class="grid-image">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Group healing circle outdoors" class="grid-image">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Woman hiking, symbolizing personal growth" class="grid-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programmes Section -->
+    <section class="programmes-section" id="programmes">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Our Specialized Wellness Programmes</h2>
+                <p class="section-subtitle">Choose from our expertly designed programmes tailored to different life contexts and healing needs</p>
+            </div>
+            
+            <div class="programmes-tabs">
+                <div class="tab-navigation" data-aos="fade-up">
+                    <button class="tab-btn active" data-tab="leadership">Leadership Wellness</button>
+                    <button class="tab-btn" data-tab="couples">Couples & Relationships</button>
+                    <button class="tab-btn" data-tab="community">Community Healing</button>
+                    <button class="tab-btn" data-tab="holistic">Holistic Practices</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- Leadership Wellness Tab -->
+                    <div class="tab-panel active" id="leadership-tab" data-aos="fade-up">
+                        <div class="programme-detail">
+                            <div class="programme-header">
+                                <div class="programme-icon">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <div class="programme-title">
+                                    <h3>Executive & Leadership Wellness</h3>
+                                    <p>Specialized wellness programmes for leaders, executives, and high-performance professionals</p>
+                                </div>
+                            </div>
+                            <div class="programme-grid">
+                                <div class="programme-features">
+                                    <h4>What's Included:</h4>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Executive Stress Management & Burnout Prevention</li>
+                                        <li><i class="fas fa-check"></i> Leadership Coaching & Emotional Intelligence</li>
+                                        <li><i class="fas fa-check"></i> Work-Life Balance Optimization</li>
+                                        <li><i class="fas fa-check"></i> Decision-Making Under Pressure Training</li>
+                                        <li><i class="fas fa-check"></i> Team Dynamics & Communication Skills</li>
+                                        <li><i class="fas fa-check"></i> Mindful Leadership Practices</li>
+                                    </ul>
+                                </div>
+                                <div class="programme-benefits">
+                                    <h4>Expected Outcomes:</h4>
+                                    <div class="benefit-cards">
+                                        <div class="benefit-card">
+                                            <i class="fas fa-chart-line"></i>
+                                            <span>Enhanced Performance</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-balance-scale"></i>
+                                            <span>Better Work-Life Balance</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-users"></i>
+                                            <span>Improved Team Leadership</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span>Stress Resilience</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Couples & Relationships Tab -->
+                    <div class="tab-panel" id="couples-tab" data-aos="fade-up">
+                        <div class="programme-detail">
+                            <div class="programme-header">
+                                <div class="programme-icon">
+                                    <i class="fas fa-heart-hands"></i>
+                                </div>
+                                <div class="programme-title">
+                                    <h3>Couples & Relationship Healing</h3>
+                                    <p>Comprehensive relationship therapy and healing programmes for couples and families</p>
+                                </div>
+                            </div>
+                            <div class="programme-grid">
+                                <div class="programme-features">
+                                    <h4>What's Included:</h4>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Couples Therapy & Counseling Sessions</li>
+                                        <li><i class="fas fa-check"></i> Communication Skills & Conflict Resolution</li>
+                                        <li><i class="fas fa-check"></i> Intimacy & Connection Building</li>
+                                        <li><i class="fas fa-check"></i> Family Dynamics & Parenting Support</li>
+                                        <li><i class="fas fa-check"></i> Trauma-Informed Relationship Healing</li>
+                                        <li><i class="fas fa-check"></i> Pre-marital & Marriage Enrichment</li>
+                                    </ul>
+                                </div>
+                                <div class="programme-benefits">
+                                    <h4>Expected Outcomes:</h4>
+                                    <div class="benefit-cards">
+                                        <div class="benefit-card">
+                                            <i class="fas fa-comments"></i>
+                                            <span>Better Communication</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-heart"></i>
+                                            <span>Deeper Intimacy</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-handshake"></i>
+                                            <span>Conflict Resolution</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-home"></i>
+                                            <span>Stronger Family Bonds</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Healing Tab -->
+                    <div class="tab-panel" id="community-tab" data-aos="fade-up">
+                        <div class="programme-detail">
+                            <div class="programme-header">
+                                <div class="programme-icon">
+                                    <i class="fas fa-people-group"></i>
+                                </div>
+                                <div class="programme-title">
+                                    <h3>Community & Organizational Wellness</h3>
+                                    <p>Large-scale wellness initiatives for organizations, communities, and groups</p>
+                                </div>
+                            </div>
+                            <div class="programme-grid">
+                                <div class="programme-features">
+                                    <h4>What's Included:</h4>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Group Therapy & Support Circles</li>
+                                        <li><i class="fas fa-check"></i> Workplace Mental Health Programs</li>
+                                        <li><i class="fas fa-check"></i> Community Trauma Healing Initiatives</li>
+                                        <li><i class="fas fa-check"></i> Organizational Wellness Assessments</li>
+                                        <li><i class="fas fa-check"></i> Mental Health Awareness Campaigns</li>
+                                        <li><i class="fas fa-check"></i> Employee Assistance Programs (EAP)</li>
+                                    </ul>
+                                </div>
+                                <div class="programme-benefits">
+                                    <h4>Expected Outcomes:</h4>
+                                    <div class="benefit-cards">
+                                        <div class="benefit-card">
+                                            <i class="fas fa-users-gear"></i>
+                                            <span>Improved Team Dynamics</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-chart-pie"></i>
+                                            <span>Higher Productivity</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-smile-beam"></i>
+                                            <span>Enhanced Well-being</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-community"></i>
+                                            <span>Stronger Communities</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Holistic Practices Tab -->
+                    <div class="tab-panel" id="holistic-tab" data-aos="fade-up">
+                        <div class="programme-detail">
+                            <div class="programme-header">
+                                <div class="programme-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="programme-title">
+                                    <h3>Holistic Healing & Spiritual Wellness</h3>
+                                    <p>Integrative healing approaches combining traditional therapy with alternative practices</p>
+                                </div>
+                            </div>
+                            <div class="programme-grid">
+                                <div class="programme-features">
+                                    <h4>What's Included:</h4>
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Mindfulness & Meditation Training</li>
+                                        <li><i class="fas fa-check"></i> Spiritual Direction & Guidance</li>
+                                        <li><i class="fas fa-check"></i> Energy Healing & Chakra Balancing</li>
+                                        <li><i class="fas fa-check"></i> Nature-Based Therapy Sessions</li>
+                                        <li><i class="fas fa-check"></i> Breathwork & Somatic Practices</li>
+                                        <li><i class="fas fa-check"></i> Integrative Nutrition Counseling</li>
+                                    </ul>
+                                </div>
+                                <div class="programme-benefits">
+                                    <h4>Expected Outcomes:</h4>
+                                    <div class="benefit-cards">
+                                        <div class="benefit-card">
+                                            <i class="fas fa-peace"></i>
+                                            <span>Inner Peace</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-seedling"></i>
+                                            <span>Spiritual Growth</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-battery-full"></i>
+                                            <span>Renewed Energy</span>
+                                        </div>
+                                        <div class="benefit-card">
+                                            <i class="fas fa-compass"></i>
+                                            <span>Life Purpose Clarity</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Your Wellness Journey</h2>
+                <p class="section-subtitle">A proven, step-by-step approach to holistic transformation and sustainable healing</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-number">
+                        <span>01</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>Comprehensive Assessment & Initial Consultation</h3>
+                        <p>Begin your transformation with a thorough evaluation of your mental, emotional, physical, and spiritual wellness state through professional assessment tools, confidential interviews, and detailed wellness mapping with our certified practitioners and licensed therapists.</p>
+                        <ul class="timeline-features">
+                            <li>90-minute comprehensive wellness assessment</li>
+                            <li>Mental health screening and evaluation</li>
+                            <li>Life challenges and trauma history review</li>
+                            <li>Personalized healing goals establishment</li>
+                            <li>Support system and resource mapping</li>
+                            <li>Confidential consultation with certified practitioners</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="timeline-number">
+                        <span>02</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>Personalized Programme Design & Planning</h3>
+                        <p>Development of a customized wellness programme specifically tailored to your unique needs, incorporating evidence-based therapeutic interventions, holistic healing modalities, mindfulness practices, and practical life integration strategies for sustainable transformation.</p>
+                        <ul class="timeline-features">
+                            <li>Evidence-based treatment planning and methodology</li>
+                            <li>Holistic healing approach integration</li>
+                            <li>Therapeutic modality selection and combination</li>
+                            <li>Flexible scheduling and session frequency planning</li>
+                            <li>Crisis intervention and emergency support protocols</li>
+                            <li>Family and support system involvement planning</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-number">
+                        <span>03</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Active Healing & Transformative Implementation</h3>
+                        <p>Engage in regular therapeutic sessions, healing workshops, group activities, and transformative practices guided by certified practitioners in a safe, confidential, and supportive environment specifically designed to facilitate deep healing, personal growth, and sustainable life changes.</p>
+                        <ul class="timeline-features">
+                            <li>Individual therapy sessions (weekly/bi-weekly)</li>
+                            <li>Group therapy and support circle participation</li>
+                            <li>Mindfulness and meditation practice training</li>
+                            <li>Homework assignments and daily practice integration</li>
+                            <li>Holistic healing workshops and activities</li>
+                            <li>Crisis support and emergency intervention access</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="timeline-number">
+                        <span>04</span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-chart-line-up"></i>
+                        </div>
+                        <h3>Progress Monitoring & Life Integration</h3>
+                        <p>Continuous assessment of your healing progress through regular evaluations, programme adjustments, and ongoing professional support to ensure sustained wellness, successful integration of healing practices into daily life, and long-term maintenance of your transformative journey.</p>
+                        <ul class="timeline-features">
+                            <li>Monthly comprehensive progress assessments</li>
+                            <li>Programme adjustments and optimization as needed</li>
+                            <li>Relapse prevention planning and skill development</li>
+                            <li>Ongoing support group and maintenance sessions</li>
+                            <li>Life skills integration and application training</li>
+                            <li>24/7 crisis support and emergency intervention</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Why Choose Mindscope Wellness</h2>
+                <p class="section-subtitle">Experience the difference of professional, compassionate, and effective wellness care</p>
+            </div>
+            
+            <div class="choose-grid">
+                <div class="choose-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="choose-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Certified Practitioners</h3>
+                    <p>Our team consists of licensed therapists, certified wellness coaches, and experienced healing practitioners with advanced training in multiple therapeutic modalities.</p>
+                </div>
+                
+                <div class="choose-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="choose-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Evidence-Based Approach</h3>
+                    <p>We use scientifically proven therapeutic methods combined with traditional healing practices to ensure the most effective and comprehensive treatment possible.</p>
+                </div>
+                
+                <div class="choose-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="choose-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Confidential & Safe</h3>
+                    <p>We maintain the highest standards of confidentiality and provide a safe, non-judgmental environment where you can heal and grow at your own pace.</p>
+                </div>
+                
+                <div class="choose-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="choose-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our commitment to your wellness doesn't end with sessions. We provide ongoing support and crisis intervention available around the clock when you need it most.</p>
+                </div>
+                
+                <div class="choose-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="choose-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3>Holistic Integration</h3>
+                    <p>We address the whole person - mind, body, and spirit - ensuring comprehensive healing that transforms all aspects of your life and relationships.</p>
+                </div>
+                
+                <div class="choose-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="choose-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Proven Results</h3>
+                    <p>With over 500 successful transformations and a 95% client satisfaction rate, our programmes have consistently delivered life-changing results for individuals and communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Transformation Stories</h2>
+                <p class="section-subtitle">Real stories from people who have experienced profound healing through our programmes</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"The leadership wellness programme transformed not just my professional performance, but my entire approach to life. I learned to manage stress, lead with empathy, and maintain balance even in high-pressure situations."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>David Mwangi</h4>
+                                <span>CEO, Tech Innovations Ltd</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Our marriage was on the brink of collapse. The couples healing programme gave us the tools and safe space to rebuild our relationship stronger than ever. We're now happily celebrating our 15th anniversary."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>James & Mary Kiprotich</h4>
+                                <span>Programme Participants</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"The holistic healing approach helped me overcome years of trauma and anxiety. The combination of therapy, mindfulness, and spiritual guidance gave me tools I use daily to maintain my mental health and inner peace."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Wanjiku</h4>
+                                <span>Individual Programme Participant</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <div class="cta-badge">
+                    <i class="fas fa-heart"></i>
+                    <span>Start Your Healing Journey</span>
+                </div>
+                <h2 class="cta-title">Take the First Step Towards Transformation</h2>
+                <p class="cta-subtitle">Your wellness journey begins with a single step. Let our experienced team guide you towards healing, growth, and lasting transformation.</p>
+                
+                <div class="cta-options">
+                    <div class="cta-option" data-aos="fade-up" data-aos-delay="100">
+                        <div class="option-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Schedule Consultation</h3>
+                        <p>Book a free 30-minute consultation to discuss your needs and explore programme options</p>
+                        <a href="#" class="btn btn-primary" onclick="openWellnessModal()">Book Now</a>
+                    </div>
+                    
+                    <div class="cta-option" data-aos="fade-up" data-aos-delay="200">
+                        <div class="option-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Speak with a Specialist</h3>
+                        <p>Talk directly with one of our wellness specialists for immediate support and guidance</p>
+                        <a href="tel:+254700000000" class="btn btn-secondary">Call Now</a>
+                    </div>
+                    
+                    <div class="cta-option" data-aos="fade-up" data-aos-delay="300">
+                        <div class="option-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Crisis Support</h3>
+                        <p>If you're experiencing a mental health crisis, our team is available 24/7 for immediate support</p>
+                        <a href="tel:+254700000000" class="btn btn-urgent">Emergency Support</a>
+                    </div>
+                </div>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>wellness@mindscope.co.ke</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ridgeways, Kiambu Road, Nairobi</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>All consultations are confidential and HIPAA compliant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wellness Consultation Modal -->
+    <div id="wellnessModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Schedule Your Wellness Consultation</h3>
+                <span class="close" onclick="closeWellnessModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="wellnessConsultationForm" class="quote-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="clientName" name="clientName" class="form-input" placeholder=" " required>
+                            <label for="clientName" class="form-label">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder=" " required>
+                            <label for="clientEmail" class="form-label">Email Address</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" id="clientPhone" name="clientPhone" class="form-input" placeholder=" " required>
+                            <label for="clientPhone" class="form-label">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="clientAge" name="clientAge" class="form-input" placeholder=" " min="18" max="100">
+                            <label for="clientAge" class="form-label">Age (Optional)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select id="programmeType" name="programmeType" class="form-input" required>
+                                <option value="">Select Programme Interest</option>
+                                <option value="leadership-wellness">Executive & Leadership Wellness</option>
+                                <option value="couples-therapy">Couples & Relationship Healing</option>
+                                <option value="community-wellness">Community & Organizational Wellness</option>
+                                <option value="holistic-healing">Holistic Healing & Spiritual Wellness</option>
+                                <option value="individual-therapy">Individual Therapy & Counseling</option>
+                                <option value="group-therapy">Group Therapy Sessions</option>
+                            </select>
+                            <label for="programmeType" class="form-label">Programme Interest</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="urgencyLevel" name="urgencyLevel" class="form-input" required>
+                                <option value="">Select Urgency Level</option>
+                                <option value="non-urgent">Non-urgent (General wellness)</option>
+                                <option value="moderate">Moderate (Some concerns)</option>
+                                <option value="urgent">Urgent (Significant distress)</option>
+                                <option value="crisis">Crisis (Immediate help needed)</option>
+                            </select>
+                            <label for="urgencyLevel" class="form-label">Urgency Level</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select id="preferredTime" name="preferredTime" class="form-input">
+                                <option value="">Select Preferred Time</option>
+                                <option value="morning">Morning (8AM-12PM)</option>
+                                <option value="afternoon">Afternoon (12PM-5PM)</option>
+                                <option value="evening">Evening (5PM-8PM)</option>
+                                <option value="weekend">Weekend</option>
+                            </select>
+                            <label for="preferredTime" class="form-label">Preferred Consultation Time</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="previousTherapy" name="previousTherapy" class="form-input">
+                                <option value="">Previous Therapy Experience</option>
+                                <option value="none">No previous therapy experience</option>
+                                <option value="some">Some previous therapy experience</option>
+                                <option value="extensive">Extensive therapy experience</option>
+                                <option value="currently">Currently in therapy elsewhere</option>
+                            </select>
+                            <label for="previousTherapy" class="form-label">Previous Therapy Experience</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="mainConcerns" name="mainConcerns" class="form-input" rows="4" placeholder=" " required></textarea>
+                        <label for="mainConcerns" class="form-label">Main Concerns (What would you like to work on or address?)</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="additionalInfo" name="additionalInfo" class="form-input" rows="3" placeholder=" "></textarea>
+                        <label for="additionalInfo" class="form-label">Additional Information (Optional)</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="privacyConsent" name="privacyConsent" required>
+                            <span class="checkmark"></span>
+                            I understand and agree to the confidentiality and privacy policies
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-animated">Schedule Consultation</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer CTA Section -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-cta-content">
+                    <h2>Ready to Transform Your Business?</h2>
+                    <p>Let's discuss how our comprehensive services can drive your success forward</p>
+                    <div class="footer-cta-buttons">
+                        <a href="../contact.html" class="btn btn-outline-white">Get Free Quote</a>
+                        <a href="../portfolio.html" class="btn btn-outline-white">View Our Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- About & Social Section -->
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <img src="../assets/mindscope-logo.png" alt="Mindscope Services Ltd">
+                            <h3>Mindscope Services Ltd</h3>
+                        </div>
+                        <p class="footer-description">
+                            Your trusted partner for comprehensive professional services across Kenya. We empower people and deliver excellence through innovative solutions tailored to your unique needs.
+                        </p>
+                        <div class="footer-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1000+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="social-link twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="social-link linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="social-link instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" aria-label="WhatsApp" class="social-link whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services Section -->
+                    <div class="footer-section">
+                        <h4>Our Services</h4>
+                        <ul class="footer-links simple-links">
+                            <li><a href="catering.html">Catering Services</a></li>
+                            <li><a href="logistics.html">Transport & Logistics</a></li>
+                            <li><a href="consulting.html">Business Consulting</a></li>
+                            <li><a href="events.html">Event Management</a></li>
+                            <li><a href="wellness.html">Wellness & Healing</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Quick Links Section -->
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links simple-links">
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="../portfolio.html">Our Portfolio</a></li>
+                            <!-- <li><a href="../blog.html">Blog <li><a href="../blog.html">Blog & Insights</a></li> Insights</a></li> -->
+                            <li><a href="../contact.html">Contact Us</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                        
+                        <h4 class="footer-subtitle">Resources</h4>
+                        <ul class="footer-links simple-links">
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Service</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#support">Support Center</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Section -->
+                    <div class="footer-section footer-contact">
+                        <h4>Get In Touch</h4>
+                        <ul class="footer-links simple-links contact-list">
+                            <li>
+                                <strong>Visit Our Office</strong><br>
+                                Ridgeways, Kiambu Road<br>
+                                Nairobi, Kenya
+                            </li>
+                            <li>
+                                <strong>Call Us</strong><br>
+                                <a href="tel:+254700000000">+254 700 000 000</a><br>
+                                <small>Mon - Fri: 8:00 AM - 6:00 PM</small>
+                            </li>
+                            <li>
+                                <strong>Email Us</strong><br>
+                                <a href="mailto:info@mindscope.co.ke">info@mindscope.co.ke</a><br>
+                                <small>We'll respond within 24 hours</small>
+                            </li>
+                        </ul>
+                        
+                        <div class="newsletter-signup">
+                            <h5>Stay Updated</h5>
+                            <p>Subscribe to our newsletter for latest updates and offers.</p>
+                            <form class="newsletter-form" id="footerNewsletterForm">
+                                <div class="input-group">
+                                    <input type="email" name="email" class="form-input" placeholder="Enter your email" required>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 Mindscope Services Ltd. All rights reserved.</p>
+                        <p class="footer-tagline">Empowering People. Delivering Excellence.</p>
+                        
+                    </div>
+                    
+                    <div class="footer-certificates">
+                        <div class="certificate-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>ISO 9001 Certified</span>
+                        </div>
+                        <div class="certificate-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="certificate-item">
+                            <i class="fas fa-award"></i>
+                            <span>HIPAA Compliant</span>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-payment">
+                        <span>We Accept:</span>
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fas fa-mobile-alt" title="M-Pesa"></i>
+                            <i class="fas fa-university" title="Bank Transfer"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+                            <!-- <li><a href="../blog.html">Blog</a></li> -->
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                        
+                        <h5 class="footer-subtitle">Resources</h5>
+                        <ul class="simple-links">
+                            <!-- <li><a href="../blog.html">Blog <li><a href="../blog.html">Blog & Insights</a></li> Insights</a></li> -->
+                            <li><a href="#downloads">Downloads</a></li>
+                            <li><a href="#case-studies">Case Studies</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Section -->
+                    <div class="footer-section">
+                        <h4>Get In Touch</h4>
+                        
+                        <ul class="contact-list">
+                            <li>
+                                <strong>Address</strong>
+                                <span>Ridgeways, Kiambu Road<br>Nairobi, Kenya</span>
+                            </li>
+                            <li>
+                                <strong>Phone</strong>
+                                <span>+254 700 000 000<br>+254 711 000 000</span>
+                            </li>
+                            <li>
+                                <strong>Email</strong>
+                                <span>info@mindscopeservices.com<br>catering@mindscopeservices.com</span>
+                            </li>
+                            <li>
+                                <strong>Hours</strong>
+                                <span>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM</span>
+                            </li>
+                        </ul>
+                        
+                        <!-- Newsletter Signup -->
+                        <div class="newsletter-signup">
+                            <h5>Stay Updated</h5>
+                            <p>Subscribe to our newsletter for the latest updates and offers</p>
+                            <form class="input-group">
+                                <input type="email" class="form-input" placeholder="Enter your email" required>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 <span class="footer-tagline">Mindscope Services Ltd</span> - Empowering Excellence. All rights reserved.</p>
+                    </div>
+                    
+                    <div class="footer-certificates">
+                        <div class="certificate-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>ISO 9001:2015</span>
+                        </div>
+                        <div class="certificate-item">
+                            <i class="fas fa-shield-check"></i>
+                            <span>HACCP Certified</span>
+                        </div>
+                        <div class="certificate-item">
+                            <i class="fas fa-award"></i>
+                            <span>Licensed Caterer</span>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-payment">
+                        <span>We Accept:</span>
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                            <i class="fas fa-money-bill-wave" title="Cash"></i>
+                            <i class="fas fa-university" title="Bank Transfer"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
+    
+    <!-- Other Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/ajax-forms.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/wellness.js"></script>
+</body>
+</html>

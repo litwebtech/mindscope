@@ -34,7 +34,7 @@
             </div>
             
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
+                <a href="#home" class="nav-link active">Home</a>
                 <a href="about.html" class="nav-link">About Us</a>
                 <div class="nav-dropdown">
                     <a href="#services" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
@@ -43,10 +43,11 @@
                         <a href="services/logistics.html" class="dropdown-link">Transport & Logistics</a>
                         <a href="services/consulting.html" class="dropdown-link">Business Consulting</a>
                         <a href="services/events.html" class="dropdown-link">Event Management</a>
+                        <a href="services/wellness.html" class="dropdown-link">Wellness & Healing</a>
                     </div>
                 </div>
                 <a href="portfolio.html" class="nav-link">Portfolio</a>
-                <a href="blog.html" class="nav-link">Blog</a>
+                <!-- <a href="blog.html" class="nav-link">Blog</a> -->
                 <a href="contact.html" class="nav-link">Contact Us</a>
             </div>
             
@@ -65,16 +66,23 @@
         </div>
         <div class="hero-content">
             <div class="container">
-                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
-                    Empowering People.<br>
-                    <span class="highlight">Delivering Excellence.</span>
-                </h1>
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-                    Your trusted partner for comprehensive catering, logistics, business consulting, and event management services across Kenya.
-                </p>
-                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
-                    <a href="contact.html" class="btn btn-primary">Get Started</a>
-                    <a href="#services" class="btn btn-secondary">View Services</a>
+                <div class="section-content">
+                    <div class="content-text" data-aos="fade-right">
+                        <h1 class="hero-title">
+                            Empowering People.<br>
+                            <span class="highlight">Delivering Excellence.</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Your trusted partner for comprehensive catering, logistics, business consulting, and event management services across Kenya.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="contact.html" class="btn btn-primary">Get Started</a>
+                            <a href="#services" class="btn btn-secondary">View Services</a>
+                        </div>
+                    </div>
+                    <div class="content-image" data-aos="fade-left">
+                        <img src="assets/mindscope-logo.jpg" alt="Mindscope Services Ltd" class="hero-logo-img">
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,7 +109,7 @@
                     <a href="about.html" class="btn btn-outline">Read More</a>
                 </div>
                 <div class="content-image" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop&crop=faces" alt="Mindscope Team" class="responsive-image">
+                    <img src="assets/images/about-image.jpg" alt="Mindscope Team" class="responsive-image">
                 </div>
             </div>
         </div>
@@ -158,6 +166,29 @@
                         Complete event planning and management from corporate conferences to social celebrations.
                     </p>
                     <a href="services/events.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="card-title">Wellness & Healing Programme</h3>
+                    <p class="card-description">
+                        Comprehensive wellness programmes for leaders, couples, and communities focusing on mental, emotional, and spiritual well-being.
+                    </p>
+                    <a href="services/wellness.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card heartbeat-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="heartbeat-container">
+                        <div class="golden-heart">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="heartbeat-counter">
+                            <span class="beat-number">72</span>
+                            <span class="beat-label">BPM</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -237,13 +268,13 @@
             <div class="logos-slider" data-aos="fade-up" data-aos-delay="100">
                 <div class="logo-track">
                     <div class="logo-item">
-                        <img src="https://via.placeholder.com/150x80/E7682E/FFFFFF?text=Client+1" alt="Client 1">
+                        <img src="assets/hktc.png" alt="Client 1">
                     </div>
                     <div class="logo-item">
-                        <img src="https://via.placeholder.com/150x80/F4C52B/FFFFFF?text=Client+2" alt="Client 2">
+                        <img src="assets/lit.png" alt="Client 2">
                     </div>
                     <div class="logo-item">
-                        <img src="https://via.placeholder.com/150x80/4B002E/FFFFFF?text=Client+3" alt="Client 3">
+                        <img src="assets/hgc.png" alt="Client 3">
                     </div>
                     <div class="logo-item">
                         <img src="https://via.placeholder.com/150x80/E7682E/FFFFFF?text=Client+4" alt="Client 4">
@@ -292,7 +323,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
         
         <div class="footer-main">
             <div class="container">
@@ -340,51 +371,28 @@
                     
                     <div class="footer-section">
                         <h4>Our Services</h4>
-                        <ul class="footer-links">
-                            <li><a href="services/catering.html">
-                                <i class="fas fa-utensils"></i>
-                                <span>
-                                    <strong>Catering Services</strong>
-                                    <small>Professional event & corporate catering</small>
-                                </span>
-                            </a></li>
-                            <li><a href="services/logistics.html">
-                                <i class="fas fa-truck"></i>
-                                <span>
-                                    <strong>Transport & Logistics</strong>
-                                    <small>Reliable transport solutions</small>
-                                </span>
-                            </a></li>
-                            <li><a href="services/consulting.html">
-                                <i class="fas fa-chart-line"></i>
-                                <span>
-                                    <strong>Business Consulting</strong>
-                                    <small>Strategic growth & consulting</small>
-                                </span>
-                            </a></li>
-                            <li><a href="services/events.html">
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>
-                                    <strong>Event Management</strong>
-                                    <small>Complete event planning</small>
-                                </span>
-                            </a></li>
+                        <ul class="footer-links simple-links">
+                            <li><a href="services/catering.html">Catering Services</a></li>
+                            <li><a href="services/logistics.html">Transport & Logistics</a></li>
+                            <li><a href="services/consulting.html">Business Consulting</a></li>
+                            <li><a href="services/events.html">Event Management</a></li>
+                            <li><a href="services/wellness.html">Wellness & Healing</a></li>
                         </ul>
                     </div>
                     
                     <div class="footer-section">
                         <h4>Quick Links</h4>
-                        <ul class="footer-links">
+                        <ul class="footer-links simple-links">
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="portfolio.html">Our Portfolio</a></li>
-                            <li><a href="blog.html">Blog & Insights</a></li>
+                            <!-- <li><a href="blog.html">Blog & Insights</a></li> -->
                             <li><a href="contact.html">Contact Us</a></li>
                             <li><a href="#careers">Careers</a></li>
-                            <li><a href="#testimonials">Client Testimonials</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
                         </ul>
                         
                         <h4 class="footer-subtitle">Resources</h4>
-                        <ul class="footer-links">
+                        <ul class="footer-links simple-links">
                             <li><a href="#privacy">Privacy Policy</a></li>
                             <li><a href="#terms">Terms of Service</a></li>
                             <li><a href="#faq">FAQ</a></li>
@@ -394,39 +402,23 @@
                     
                     <div class="footer-section footer-contact">
                         <h4>Get In Touch</h4>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <strong>Visit Our Office</strong>
-                                    <p>Ridgeways, Kiambu Road<br>Nairobi, Kenya</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <strong>Call Us</strong>
-                                    <p><a href="tel:+254700000000">+254 700 000 000</a></p>
-                                    <small>Mon - Fri: 8:00 AM - 6:00 PM</small>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <strong>Email Us</strong>
-                                    <p><a href="mailto:info@mindscope.co.ke">info@mindscope.co.ke</a></p>
-                                    <small>We'll respond within 24 hours</small>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="footer-links simple-links contact-list">
+                            <li>
+                                <strong>Visit Our Office</strong><br>
+                                Ridgeways, Kiambu Road<br>
+                                Nairobi, Kenya
+                            </li>
+                            <li>
+                                <strong>Call Us</strong><br>
+                                <a href="tel:+254700000000">+254 700 000 000</a><br>
+                                <small>Mon - Fri: 8:00 AM - 6:00 PM</small>
+                            </li>
+                            <li>
+                                <strong>Email Us</strong><br>
+                                <a href="mailto:info@mindscope.co.ke">info@mindscope.co.ke</a><br>
+                                <small>We'll respond within 24 hours</small>
+                            </li>
+                        </ul>
                         
                         <div class="newsletter-signup">
                             <h5>Stay Updated</h5>
@@ -451,6 +443,7 @@
                     <div class="footer-copyright">
                         <p>&copy; 2025 Mindscope Services Ltd. All rights reserved.</p>
                         <p class="footer-tagline">Empowering People. Delivering Excellence.</p>
+                        
                     </div>
                     
                     <div class="footer-certificates">
@@ -477,6 +470,7 @@
                             <i class="fas fa-university" title="Bank Transfer"></i>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
