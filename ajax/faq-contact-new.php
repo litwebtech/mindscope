@@ -164,7 +164,7 @@ try {
                         <li><a href='" . SITE_URL . "/services/catering.html' style='color: #4B002E;'>Catering Services</a></li>
                         <li><a href='" . SITE_URL . "/services/events.html' style='color: #4B002E;'>Event Management</a></li>
                         <li><a href='" . SITE_URL . "/services/logistics.html' style='color: #4B002E;'>Logistics Solutions</a></li>
-                        <li><a href='" . SITE_URL . "/services/consulting.html' style='color: #4B002E;'>Business Consulting</a></li>
+                        <li><a href='" . SITE_URL . "/services/consulting.html' style='color: #4B002E;'Strategic Business Support & Consulting/a></li>
                         <li><a href='" . SITE_URL . "/services/wellness.html' style='color: #4B002E;'>Wellness Programs</a></li>
                     </ul>
                 </div>

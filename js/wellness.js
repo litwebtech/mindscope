@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = 'tel:+254700000000';
+                        window.location.href = 'tel:+254722888385';
                     } else {
                         submitWellnessForm(data);
                     }

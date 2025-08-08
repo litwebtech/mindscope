@@ -7,7 +7,7 @@ define('DB_NAME', 'mindscope_db');
 
 // Site configuration
 define('SITE_URL', 'http://localhost/mindscope');
-define('SITE_NAME', 'Mindscope Services Ltd');
+define('SITE_NAME', 'Mindscope Services & Supplies Ltd');
 define('SITE_EMAIL', 'info@mindscopeservices.com');
 define('ADMIN_EMAIL', 'admin@mindscopeservices.com');
 

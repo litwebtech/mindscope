@@ -315,7 +315,7 @@ INSERT INTO
 VALUES
   (
     'site_name',
-    'Mindscope Services Ltd',
+    'Mindscope Services 'Mindscope Services 'Mindscope Services Ltd' Supplies Ltd' Supplies Ltd',
     'text',
     'Website name',
     'general',

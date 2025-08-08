@@ -221,7 +221,7 @@ function handleConsultingQuoteSubmission(formData) {
                     <p><strong>Please try one of these alternatives:</strong></p>
                     <ul style="text-align: left; margin: 20px 0;">
                         <li>Call us directly at <strong>+254 700 000 000</strong></li>
-                        <li>Email us at <strong>info@mindscope.co.ke</strong></li>
+                        <li>Email us at <strong>info@mindscopeservices.co.ke</strong></li>
                         <li>Try submitting the form again in a few minutes</li>
                     </ul>
                 `,
