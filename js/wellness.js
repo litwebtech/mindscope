@@ -236,7 +236,7 @@ ${data.mainConcerns}
 ${data.additionalInfo ? `*Additional Information:*\n${data.additionalInfo}\n\n` : ''}Please confirm receipt of my consultation request. Thank you!`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/254700000000?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/254722888385?text=${encodedMessage}`;
     
     Swal.fire({
         title: 'Quick Contact via WhatsApp',

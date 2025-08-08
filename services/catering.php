@@ -420,7 +420,7 @@ include '../includes/header.php';
         <div class="contact-info">
           <h4>Need immediate assistance?</h4>
           <p><strong>Call us:</strong> <a href="tel:+254722888385">+254 722 888385</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/254700000000">+254 700 000 000</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/254722888385">+254 700 000 000</a></p>
         </div>
       </div>
 

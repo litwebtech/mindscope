@@ -37,7 +37,7 @@ HEALTH_CHECK_URLS=(
 )
 
 # Form Testing Data
-TEST_CONTACT_DATA="name=Test+User&email=test@mindscope.co.ke&phone=254700000000&subject=Automated+Test&message=This+is+an+automated+test"
+TEST_CONTACT_DATA="name=Test+User&email=test@mindscope.co.ke&phone=254722888385&subject=Automated+Test&message=This+is+an+automated+test"
 TEST_NEWSLETTER_DATA="email=test@mindscope.co.ke"
 
 # Notification Settings

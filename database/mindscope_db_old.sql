@@ -485,7 +485,7 @@ VALUES
   ),
   (
     'whatsapp_number',
-    '254700000000',
+    '254722888385',
     'text',
     'WhatsApp business number'
   );

@@ -167,7 +167,7 @@ if [[ "$1" == "--test-forms" ]]; then
     form_total=0
     
     # Test contact form
-    contact_data="name=Test+User&email=test@example.com&phone=254700000000&subject=Test&message=Test+message"
+    contact_data="name=Test+User&email=test@example.com&phone=254722888385&subject=Test&message=Test+message"
     form_total=$((form_total + 1))
     if test_form_endpoint "ajax/contact.php" "$contact_data"; then
         form_success=$((form_success + 1))

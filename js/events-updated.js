@@ -129,7 +129,7 @@ function contactEventsWhatsApp() {
     if (typeof openWhatsApp === 'function') {
         openWhatsApp(message);
     } else {
-        const phoneNumber = '254700000000';
+        const phoneNumber = '254722888385';
         const encodedMessage = encodeURIComponent(message);
         const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
         window.open(whatsappURL, '_blank');
