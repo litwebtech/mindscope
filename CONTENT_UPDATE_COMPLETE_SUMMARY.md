@@ -44,7 +44,7 @@ Replaced the existing story with the new detailed version:
   - Human Resource & Staff Development
   - Branding & Business Identity Support
 
-##### Mindscope Wellness & Healing Programme
+##### Mindscope Counselling & Wellness
 - Updated company name references
 - Kept the comprehensive program structure:
   - Personalized Counseling Services

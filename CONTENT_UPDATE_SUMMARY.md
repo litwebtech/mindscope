@@ -30,7 +30,7 @@ Complete website content update implementing new company information, services r
 - **Human Resource & Staff Development** - Organizational structuring
 - **Branding & Business Identity Support** - Professional business profiles
 
-#### Mindscope Wellness & Healing Programme (Enhanced)
+#### Mindscope Counselling & Wellness (Enhanced)
 - **Personalized Counseling Services** - One-on-one trained counselor sessions
 - **Group Wellness & Team Building** - Strengthen connections and trust
 - **Training & Workshops** - Mental health education and skill building
@@ -79,7 +79,7 @@ Today, Mindscope stands as a trusted, multi-service company committed to excelle
 All navigation menus across the website now reflect:
 - **Transport & Automobile Services** (instead of Transport & Logistics)
 - **Strategic Business Support & Consulting** (instead of Business Consulting)
-- **Mindscope Wellness & Healing Programme** (instead of Wellness & Healing)
+- **Mindscope Counselling & Wellness** (instead of Wellness & Healing)
 
 ### 7. SEO & Meta Updates
 - ✅ Page titles updated with new company name

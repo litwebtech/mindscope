@@ -19,7 +19,7 @@ update_company_name() {
         # Update service names in navigation and links
         sed -i 's/>Transport & Logistics</>Transport & Automobile Services</g' "$file"
         sed -i 's/>Business Consulting</>Strategic Business Support & Consulting</g' "$file"
-        sed -i 's/>Wellness & Healing</>Mindscope Wellness & Healing Programme</g' "$file"
+        sed -i 's/>Wellness & Healing</>Mindscope Counselling & Wellness</g' "$file"
         
         echo "   ✓ Updated $file"
     fi

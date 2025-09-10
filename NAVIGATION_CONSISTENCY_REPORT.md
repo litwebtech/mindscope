@@ -16,7 +16,7 @@ All pages now have **identical** service dropdown structure:
 - ✅ **Transport & Automobile Services** → `services/logistics.html`
 - ✅ **Strategic Business Support & Consulting** → `services/consulting.html`
 - ✅ **Event Management** → `services/events.html`
-- ✅ **Mindscope Wellness & Healing Programme** → `services/wellness.html`
+- ✅ **Mindscope Counselling & Wellness** → `services/wellness.html`
 
 #### **3. Blog Link Consistency**
 - ✅ **All pages**: Blog links are properly commented out: `<!-- <a href="blog.html" class="nav-link">Blog</a> -->`

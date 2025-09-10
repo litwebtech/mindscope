@@ -22,7 +22,7 @@
 **After:**
 - `Transport & Automobile Services`
 - `Strategic Business Support & Consulting`
-- `Mindscope Wellness & Healing Programme`
+- `Mindscope Counselling & Wellness`
 
 #### 3. Files Cleaned:
 - ✅ All HTML pages (20+ files)
